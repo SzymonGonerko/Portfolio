@@ -15,11 +15,21 @@ const appStyles: {} = {
   display: 'flex',
   flexDirection: 'column',
 };
+const AnimatedCursor = require('react-animated-cursor');
 
 const App = () => {
   const scrollbar = useRef<BaseScrollbar | null>(null);
   return (
     <main className="App" style={appStyles}>
+      <AnimatedCursor
+        innerSize={15}
+        outerSize={10}
+        color="0, 0, 0"
+        outerAlpha={0.2}
+        trailingSpeed={1}
+        innerScale={0.4}
+        outerScale={5}
+      />
       <Scrollbar
         damping={0.04}
         ref={scrollbar}
