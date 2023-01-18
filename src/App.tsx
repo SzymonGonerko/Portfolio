@@ -1,6 +1,5 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import './App.scss';
-import { useRef } from 'react';
 import { Scrollbar } from 'smooth-scrollbar-react';
 import type { Scrollbar as BaseScrollbar } from 'smooth-scrollbar/scrollbar';
 
@@ -19,17 +18,21 @@ const AnimatedCursor = require('react-animated-cursor');
 
 const App = () => {
   const scrollbar = useRef<BaseScrollbar | null>(null);
+  const windowWidth = useRef<number>(window.innerWidth);
+
   return (
     <main className="App" style={appStyles}>
-      <AnimatedCursor
-        innerSize={15}
-        outerSize={10}
-        color="0, 0, 0"
-        outerAlpha={0.2}
-        trailingSpeed={1}
-        innerScale={0.4}
-        outerScale={5}
-      />
+      {windowWidth.current > 600 && (
+        <AnimatedCursor
+          innerSize={15}
+          outerSize={10}
+          color="0, 0, 0"
+          outerAlpha={0.2}
+          trailingSpeed={1}
+          innerScale={0.4}
+          outerScale={5}
+        />
+      )}
       <Scrollbar
         damping={0.04}
         ref={scrollbar}
@@ -39,7 +42,7 @@ const App = () => {
           } as {},
         }}
       >
-        <Hero />
+        <Hero windowWidth={windowWidth.current} />
         <CurrentProject />
         <Repositories />
         <Skills />

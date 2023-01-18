@@ -1,0 +1,43 @@
+@keyframes stroke {
+  0% {
+    fill: rgba(72, 138, 20, 0);
+    stroke: rgb(133, 133, 133);
+    stroke-dashoffset: 0%;
+    stroke-dasharray: 0 50%;
+    stroke-width: 0.5;
+  }
+  80% {
+    fill: rgba(72, 138, 20, 0);
+    stroke: rgb(133, 133, 133);
+    stroke-width: 1.5;
+  }
+  100% {
+    fill: rgb(0, 0, 0);
+    stroke: rgb(133, 133, 133);
+    stroke-dashoffset: -20%;
+    stroke-dasharray: 50% 0;
+    stroke-width: 0;
+  }
+}
+
+@keyframes strokeMobile {
+  0% {
+    fill: rgba(72, 138, 20, 0);
+    stroke: rgb(133, 133, 133);
+    stroke-dashoffset: 0%;
+    stroke-dasharray: 0 50%;
+    stroke-width: 0.5;
+  }
+  80% {
+    fill: rgba(72, 138, 20, 0);
+    stroke: rgb(133, 133, 133);
+    stroke-width: 0.8;
+  }
+  100% {
+    fill: rgb(0, 0, 0);
+    stroke: rgb(133, 133, 133);
+    stroke-dashoffset: -50%;
+    stroke-dasharray: 50% 0;
+    stroke-width: 0;
+  }
+}
