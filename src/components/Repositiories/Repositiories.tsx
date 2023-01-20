@@ -3,7 +3,7 @@ import './repositories.scss';
 
 export const Repositories = () => {
   return (
-    <section className="repo">
+    <section className="repo link">
       <h1>Repositories</h1>
     </section>
   );

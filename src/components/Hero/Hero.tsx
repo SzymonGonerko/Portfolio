@@ -1,5 +1,6 @@
 import React from 'react';
 import './hero.scss';
+import { ScrollContainer, useGlobalState } from 'react-nice-scroll';
 
 interface propsTypes {
   windowWidth: number;
@@ -7,13 +8,27 @@ interface propsTypes {
 
 export const Hero = (props: propsTypes) => {
   const { windowWidth } = props;
+  const [smoothScrollBar] = useGlobalState('smoothScrollBar');
+
+  const handleScrollTo = (whitch: string) => {
+    if (smoothScrollBar) {
+      const links = document.querySelectorAll(
+        '.link'
+      ) as unknown as HTMLElement[];
+      const filteredLinks = [...links].filter((element: any) =>
+        element.classList.contains(whitch)
+      );
+      smoothScrollBar.scrollIntoView(filteredLinks[0]);
+    }
+  };
+
   return (
-    <section className="hero">
+    <section className="hero link">
       <div className="nameBox">
         <div className="wrapper">
           <h1>Szymon Gonerko</h1>
           <h2>
-            <strong>Frontend&nbsp;</strong>
+            <span>Frontend&nbsp;</span>
             developer
           </h2>
         </div>
@@ -21,24 +36,24 @@ export const Hero = (props: propsTypes) => {
         <nav>
           <ul>
             <li>
-              <a>
-                Sekcja <span>01</span>
-              </a>
+              <button onClick={() => handleScrollTo('currentProject')}>
+                Section<span>01</span>
+              </button>
             </li>
             <li>
-              <a>
-                Sekcja <span>02</span>
-              </a>
+              <button onClick={() => handleScrollTo('repo')}>
+                Section <span>02</span>
+              </button>
             </li>
             <li>
-              <a>
-                Sekcja <span>03</span>
-              </a>
+              <button onClick={() => handleScrollTo('skills')}>
+                Section <span>03</span>
+              </button>
             </li>
             <li>
-              <a>
-                Sekcja <span>04</span>
-              </a>
+              <button onClick={() => handleScrollTo('moreInfo')}>
+                Section <span>04</span>
+              </button>
             </li>
           </ul>
         </nav>
@@ -46,10 +61,18 @@ export const Hero = (props: propsTypes) => {
 
       <div className="helloBox">
         <svg>
-          <text x="2%" y={windowWidth < 600 ? '38%' : '45%'} textAnchor="left">
+          <text
+            x="2%"
+            y={windowWidth < 600 ? '38%' : windowWidth < 900 ? '45%' : '45%'}
+            textAnchor="left"
+          >
             Hello It's nice to
           </text>
-          <text x="2%" y={windowWidth < 600 ? '60%' : '55%'} textAnchor="left">
+          <text
+            x="2%"
+            y={windowWidth < 600 ? '70%' : windowWidth < 950 ? '51%' : '55%'}
+            textAnchor="left"
+          >
             see you ;-)
           </text>
         </svg>
