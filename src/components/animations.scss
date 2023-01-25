@@ -41,3 +41,12 @@
     stroke-width: 0;
   }
 }
+
+@keyframes visibility {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

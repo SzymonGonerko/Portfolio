@@ -1,11 +1,8 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.scss';
-import {
-  ScrollContainer,
-  FixedElement,
-  useGlobalState,
-} from 'react-nice-scroll';
+import { ScrollContainer, useGlobalState } from 'react-nice-scroll';
 import 'react-nice-scroll/dist/styles.css';
+import { FaChevronUp } from 'react-icons/fa';
 
 import { Hero } from '../src/components/Hero/Hero';
 import { CurrentProject } from './components/CurrentProject/CurrentProject';
@@ -17,27 +14,44 @@ const AnimatedCursor = require('react-animated-cursor');
 
 const App = () => {
   const [smoothScrollBar] = useGlobalState('smoothScrollBar');
-  const [scroller] = useGlobalState('container');
+  const [showTopArrow, setShowTopArrow] = useState(false);
+  const hero = document.querySelector('.hero') as HTMLElement;
   const [windowSize, setWindowSize] = useState<number[]>([
     window.innerWidth,
     window.innerHeight,
   ]);
 
+  const handleWindowResize = () => {
+    setWindowSize([window.innerWidth, window.innerHeight]);
+  };
+  const nativeSrollTo = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const logMovement = () => {
+    smoothScrollBar?.isVisible(hero)
+      ? setShowTopArrow(false)
+      : setShowTopArrow(true);
+    if (smoothScrollBar === undefined) {
+      const arrow = document.getElementById('topArrow') as HTMLDivElement;
+      arrow?.addEventListener('click', nativeSrollTo);
+    }
+  };
+
   useEffect(() => {
-    const handleWindowResize = () => {
-      setWindowSize([window.innerWidth, window.innerHeight]);
-    };
     window.addEventListener('resize', handleWindowResize);
+    document.addEventListener('mousemove', logMovement);
+    document.addEventListener('touchstart', logMovement);
     return () => {
       window.removeEventListener('resize', handleWindowResize);
+      document.removeEventListener('mousemove', logMovement);
+      document.removeEventListener('touchstart', logMovement);
     };
   });
 
   const scrollToTop = () => {
-      smoothScrollBar?.scrollTo(0, 0, 1000)
-      const hero = document.querySelector('.hero') as any
-      console.log(smoothScrollBar?.isVisible(hero))
-  }
+    smoothScrollBar?.scrollTo(0, 0, 1000);
+  };
 
   return (
     <main className="App">
@@ -63,6 +77,11 @@ const App = () => {
         <Skills />
         <MoreInfo />
       </ScrollContainer>
+      {showTopArrow && (
+        <div id="topArrow" onClick={scrollToTop}>
+          <FaChevronUp />
+        </div>
+      )}
     </main>
   );
 };

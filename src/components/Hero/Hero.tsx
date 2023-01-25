@@ -1,6 +1,6 @@
 import React from 'react';
 import './hero.scss';
-import { ScrollContainer, useGlobalState } from 'react-nice-scroll';
+import { useGlobalState } from 'react-nice-scroll';
 
 interface propsTypes {
   windowWidth: number;
@@ -11,14 +11,16 @@ export const Hero = (props: propsTypes) => {
   const [smoothScrollBar] = useGlobalState('smoothScrollBar');
 
   const handleScrollTo = (whitch: string) => {
+    const links = document.querySelectorAll(
+      '.link'
+    ) as unknown as HTMLElement[];
+    const filteredLinks = [...links].filter((element: HTMLElement) =>
+      element.classList.contains(whitch)
+    );
     if (smoothScrollBar) {
-      const links = document.querySelectorAll(
-        '.link'
-      ) as unknown as HTMLElement[];
-      const filteredLinks = [...links].filter((element: any) =>
-        element.classList.contains(whitch)
-      );
       smoothScrollBar.scrollIntoView(filteredLinks[0]);
+    } else {
+      filteredLinks[0].scrollIntoView({ behavior: 'smooth' });
     }
   };
 
