@@ -1,10 +1,73 @@
+@use  '../mixins.scss' as *;
+
 .currentProject {
   display: flex;
-  justify-content: center;
   align-items: center;
+  flex-direction: column;
   height: 100vh;
-  background-color: rgb(121, 240, 162);
   font-size: 40px;
-  text-align: center;
   font-family: 'Apfel', sans-serif;
+  .wrapperDesktop {
+    display: none;
+  }
+  .wrapperMobile {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    header {
+      display: flex;
+      flex-direction: column;
+      padding: 8px 8px 0 8px;
+      .linkedIn {
+        font-size: 4.3vw;
+        font-family: 'Apfel', sans-serif;
+        color: red;
+        text-transform: none;
+      }
+      h1 {
+        padding-top: 8px;
+        font-size: 6vw;
+        font-weight: 600;
+      }
+      h2 {
+        padding-top: 4px;
+        font-size: 4.8vw;
+        font-weight: 400;
+        line-height: 4.4vw;
+      }
+    }
+    .container {
+      background-color: #F3F3F3;
+      position: relative;
+      flex-grow: 1;
+      margin: 8px;
+      a {
+        @include googlePlayButton;
+        strong {
+          margin-top: 1px;
+        }
+        svg {
+          line-height: 10vw;
+          margin-left: 5px;
+          font-size: 3vw;
+        }
+      }
+      img {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-47%, -50%);
+        width: 86%;      
+      }
+    }
+  }
+  @media (min-width: 600px) {
+  .wrapperMobile {
+    display: none;
+  }
+  .wrapperDesktop {
+    display: flex;
+  }
+
+  }
 }
