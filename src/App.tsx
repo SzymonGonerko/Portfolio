@@ -68,7 +68,7 @@ const App = () => {
       )}
       <ScrollContainer
         activeSmoothScrollOnTouchDevice={false}
-        damping={0.05}
+        damping={0.07}
         thumbMinSize={10}
       >
         <Hero windowWidth={windowSize[0]} />

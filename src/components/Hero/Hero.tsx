@@ -27,7 +27,6 @@ export const Hero = (props: propsTypes) => {
   return (
     <section className="hero link">
       <div className="nameBox">
-
         <nav>
           <ul>
             <li>
@@ -55,7 +54,7 @@ export const Hero = (props: propsTypes) => {
       </div>
 
       <div className="helloBox">
-      <div className="wrapper">
+        <div className="wrapper">
           <h1>Szymon Gonerko</h1>
           <h2>
             <span>Frontend&nbsp;</span>
@@ -68,14 +67,14 @@ export const Hero = (props: propsTypes) => {
             y={windowWidth < 600 ? '38%' : windowWidth < 900 ? '45%' : '45%'}
             textAnchor="left"
           >
-            Hello It's nice to {windowWidth < 600 ? "see" : ""}
+            Hello It's nice to {windowWidth < 600 ? 'see' : ''}
           </text>
           <text
             x="2%"
             y={windowWidth < 600 ? '65%' : windowWidth < 950 ? '51%' : '55%'}
             textAnchor="left"
           >
-            {windowWidth < 600 ? "you ;-)" : "see you ;-)"}
+            {windowWidth < 600 ? 'you ;-)' : 'see you ;-)'}
           </text>
         </svg>
       </div>

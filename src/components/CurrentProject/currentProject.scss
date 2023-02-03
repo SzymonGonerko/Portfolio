@@ -1,4 +1,4 @@
-@use  '../mixins.scss' as *;
+@use '../mixins.scss' as *;
 
 .currentProject {
   display: flex;
@@ -37,7 +37,7 @@
       }
     }
     .container {
-      background-color: #F3F3F3;
+      background-color: #f3f3f3;
       position: relative;
       flex-grow: 1;
       margin: 8px;
@@ -57,17 +57,76 @@
         top: 40%;
         left: 50%;
         transform: translate(-47%, -50%);
-        width: 86%;      
+        width: 86%;
       }
     }
   }
   @media (min-width: 600px) {
-  .wrapperMobile {
-    display: none;
-  }
-  .wrapperDesktop {
-    display: flex;
-  }
-
+    .wrapperMobile {
+      display: none;
+    }
+    .wrapperDesktop {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      .plantifiScrollBox {
+        display: flex;
+        flex-direction: column;
+        background-color: #e1e1e1;
+        width: 50%;
+        height: 100%;
+        .containerImg {
+          display: flex;
+          flex-direction: column;
+          margin: 64px;
+          justify-content: center;
+          align-items: center;
+          img {
+            display: block;
+            width: 213px;
+            height: 462px;
+            box-shadow: 57px 84px 120px -90px rgba(66, 68, 90, 1);
+            border-radius: 26px;
+          }
+        }
+        .scrollbar-thumb {
+          width: 3px;
+          background: rgba(0, 0, 0, 0.114);
+        }
+        .scrollbar-track-y {
+          right: -4px;
+        }
+      }
+      .plantifiDescriptionBox {
+        width: 50%;
+        header {
+          display: flex;
+          position: relative;
+          flex-direction: column;
+          width: 100%;
+          padding: 4.5vw 4vw 0 4vw;
+          h1 {
+            font-size: 3.5vw;
+            letter-spacing: -2%;
+            font-weight: 400;
+          }
+          h2 {
+            font-size: 1.8vw;
+            font-weight: 400;
+            padding-top: 0.8vw;
+          }
+          a {
+            @include googlePlayButton;
+            position: static;
+            font-weight: bold;
+            transform: none;
+            width: 15vw;
+            height: 4vw;
+            font-size: 1.2vw;
+            margin-top: 2vw;
+          }
+        }
+      }
+    }
   }
 }
