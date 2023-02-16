@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import './App.scss';
-import { ScrollContainer, useGlobalState } from 'react-nice-scroll';
+import {
+  ScrollContainer,
+  useGlobalState,
+  HorizontalSection,
+} from 'react-nice-scroll';
 import 'react-nice-scroll/dist/styles.css';
 import { FaChevronUp } from 'react-icons/fa';
 
@@ -73,7 +77,10 @@ const App = () => {
       >
         <Hero windowWidth={windowSize[0]} />
         <CurrentProject />
-        <Repositories />
+        <HorizontalSection>
+          <Repositories />
+        </HorizontalSection>
+
         <Skills />
         <MoreInfo />
       </ScrollContainer>

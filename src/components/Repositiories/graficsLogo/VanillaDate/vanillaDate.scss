@@ -1,0 +1,22 @@
+.vanillaDate {
+  background: linear-gradient(
+    163deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(124, 200, 255, 0.9417892156862745) 0%,
+    rgba(242, 34, 221, 0.9025735294117647) 100%
+  );
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  .draw {
+    background-image: url(./draw.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 93%;
+  }
+}

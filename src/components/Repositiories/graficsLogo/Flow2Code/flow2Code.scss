@@ -1,0 +1,17 @@
+.flow2Code {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background-color: black;
+  .logo {
+    background-image: url(./flow.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 60%;
+    height: 50%;
+  }
+}
