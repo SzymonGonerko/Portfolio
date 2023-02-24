@@ -1,14 +1,15 @@
 import React from 'react';
 import './sgWorld.scss';
+import { Play } from '../Play/Play';
 
-export const SGWorld = () => {
+interface props {
+  live: string,
+}
+
+export const SGWorld = ({live} : props) => {
   return (
     <div className="SGWorld">
-      <div className="mainSquare">
-        <div className="square-m">
-          <div className="square-s" />
-        </div>
-      </div>
+        <Play live={live}/>
     </div>
   );
 };

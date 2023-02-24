@@ -1,15 +1,15 @@
 import React from 'react';
 import './optimoDev.scss';
+import { Play } from '../Play/Play';
 
-export const OptimoDev = () => {
+interface props {
+  live: string,
+}
+
+export const OptimoDev = ({live}: props) => {
   return (
     <div className="optimoDev">
-      <div className="square">
-        <div className="px" />
-        <div className="px" />
-        <div className="px" />
-        <div className="px" />
-      </div>
+      <Play live={live}/>
     </div>
   );
 };

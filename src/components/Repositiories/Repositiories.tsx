@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import './repositories.scss';
 import 'react-nice-scroll/dist/styles.css';
+import { ScrollContainer } from 'react-nice-scroll';
+
+import { Card } from './Card/Card';
 import { VanillaDate } from './graficsLogo/VanillaDate/VanillaDate';
 import { SGWorld } from './graficsLogo/SGWorld/SGWorld';
 import { SunsetTypes } from './graficsLogo/SunsetTypes/SunsetTypes';
@@ -11,41 +14,78 @@ const repositories = [
   {
     name: 'Vanilla-Date',
     finished: '14.05.2022',
-    liveLink: 'https://vanilla-date.netlify.app',
     library: 'Vanilla JS',
-    logo: <VanillaDate />,
+    logo: <VanillaDate live={'https://vanilla-date.netlify.app'}  />,
+    github: 'https://github.com/SzymonGonerko/Vanilla-Date',
+    description: `Dating app, written in a React library. Placed on a Firebase with user authentication and real time chat. Design inspired by the movie "The Shape of Water" dir. Guillermo del Toro`,
   },
   {
     name: 'SGWorld',
     finished: '11.07.2022',
-    liveLink: 'https://sgworld.netlify.app',
     library: 'Three.js',
-    logo: <SGWorld />,
+    logo: <SGWorld live={'https://sgworld.netlify.app'}  />,
+    github: 'https://github.com/SzymonGonerko/SGWorld',
+    description: `Reflection of my living place. Project 3D include my myliving place, inspirations and real exissting things`
   },
   {
     name: 'SunsetTypes',
     finished: '14.07.2022',
-    liveLink: 'https://sunsettypes.netlify.app',
     library: 'TypeScript/Redux',
-    logo: <SunsetTypes />,
+    logo: <SunsetTypes live={'https://sunsettypes.netlify.app'} />,
+    github: 'https://github.com/SzymonGonerko/Sunset-Types',
+    description: `An experimental app includes the toDoList and calculator on 3D space. Compontnts are placed in sunset scenery. It's up to You whitch sunset type you choose ;)`
   },
   {
     name: 'Flow2CodeGame',
     finished: '18.07.2022',
-    liveLink: 'https://flow2codegame.netlify.app',
     library: 'Three.js',
-    logo: <Flow2Code />,
+    logo: <Flow2Code live={'https://flow2codegame.netlify.app'} />,
+    github: 'https://github.com/SzymonGonerko/Flow2CodeGame',
+    description: `Recruiment game for development company from Poznań. Player can shoot by cannon using by special GUI panel.`
   },
   {
     name: 'OptimoDevGame',
     finished: '27.07.2022',
-    liveLink: 'https://optimodevgame.netlify.app',
     library: 'TS/PIXI',
-    logo: <OptimoDev />,
+    logo: <OptimoDev live={'https://optimodevgame.netlify.app'}  />,
+    github: 'https://github.com/SzymonGonerko/Optimo-Development-Game',
+    description: `Game creted for comany from Łódź. The main goal of game is catch the most food as possible. Game stylized on 90's`
   },
 ];
 
-export const Repositories = () => {
+interface props {
+  windowWidth: number
+}
+
+export const Repositories = ({ windowWidth} : props) => {
+  const projects = useRef<any>(null)
+
+
+  useEffect(() => {
+    projects.current.scroll(projects.current.offsetWidth/2, 0)
+  }, [])
+
+
+const desktopLayout = <>
+  <ScrollContainer>
+    <div className="wrapper">
+      {repositories.map((el, i) => (
+        <Card github={el.github} key={i} description={el.description} logo={el.logo} finished={el.finished} library={el.library} name={el.name}/>
+      ))}
+    </div>
+  </ScrollContainer>
+</>
+
+const mobileLayout = <>
+      <div className="wrapper">
+        {repositories.map((el, i) => (
+          <Card github={el.github} key={i} description={el.description} logo={el.logo} finished={el.finished} library={el.library} name={el.name} />
+        ))}
+      </div>
+</>
+
+
+
   return (
     <section className="repo link">
       <div className="repoInfo">
@@ -54,32 +94,8 @@ export const Repositories = () => {
           <h2>My repositories on GitHub</h2>
         </header>
       </div>
-      <div className="projects">
-        <div className="wrapper">
-          {repositories.map((el, i) => (
-            <div key={i} className="card">
-              <div className="gradient">{el.logo}</div>
-              <div className="generalInfo">
-                <div className="wrapperInfo">
-                  <div className="topInfo">
-                    <p className="date">{el.finished}</p>
-                    <p className="library">{el.library}</p>
-                  </div>
-                  <p className="title">{el.name}</p>
-                  <p className="description">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Deserunt et totam ipsum, sequi minima cumque dolorum beatae
-                    pariatur soluta quod. Nihil cumque omnis repellat ducimus
-                    molestiae veritatis, id necessitatibus odio?
-                  </p>
-                  <a target={'_blank'} href={el.liveLink}>
-                    live
-                  </a>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
+      <div ref={projects} className="projects">
+        {windowWidth > 600 ? desktopLayout: mobileLayout}
       </div>
     </section>
   );

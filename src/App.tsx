@@ -3,7 +3,6 @@ import './App.scss';
 import {
   ScrollContainer,
   useGlobalState,
-  HorizontalSection,
 } from 'react-nice-scroll';
 import 'react-nice-scroll/dist/styles.css';
 import { FaChevronUp } from 'react-icons/fa';
@@ -16,6 +15,7 @@ import { MoreInfo } from './components/MoreInfo/MoreInfo';
 
 const AnimatedCursor = require('react-animated-cursor');
 
+
 const App = () => {
   const [smoothScrollBar] = useGlobalState('smoothScrollBar');
   const [showTopArrow, setShowTopArrow] = useState(false);
@@ -24,6 +24,38 @@ const App = () => {
     window.innerWidth,
     window.innerHeight,
   ]);
+
+  const desktopLayout = <>
+  <AnimatedCursor
+    innerSize={10}
+    outerSize={7}
+    color="0, 0, 0"
+    outerAlpha={0.2}
+    trailingSpeed={1}
+    innerScale={0.4}
+    outerScale={5}
+    clickables={[
+      'a', 'button',
+    ]}
+  />
+  <ScrollContainer
+    damping={0.07}
+    thumbMinSize={10}
+>
+  <Hero windowWidth={windowSize[0]} />
+  <CurrentProject />
+  <Repositories windowWidth={windowSize[0]}/>
+  <Skills />
+  <MoreInfo />
+</ScrollContainer></>;
+
+const mobileLayout = <>
+<Hero windowWidth={windowSize[0]} />
+<CurrentProject />
+<Repositories windowWidth={windowSize[0]} />
+<Skills />
+<MoreInfo />
+</>
 
   const handleWindowResize = () => {
     setWindowSize([window.innerWidth, window.innerHeight]);
@@ -59,31 +91,7 @@ const App = () => {
 
   return (
     <main className="App">
-      {windowSize[0] > 600 && (
-        <AnimatedCursor
-          innerSize={12}
-          outerSize={12}
-          color="0, 0, 0"
-          outerAlpha={0.2}
-          trailingSpeed={1}
-          innerScale={1}
-          outerScale={0}
-        />
-      )}
-      <ScrollContainer
-        activeSmoothScrollOnTouchDevice={false}
-        damping={0.07}
-        thumbMinSize={10}
-      >
-        <Hero windowWidth={windowSize[0]} />
-        <CurrentProject />
-        <HorizontalSection>
-          <Repositories />
-        </HorizontalSection>
-
-        <Skills />
-        <MoreInfo />
-      </ScrollContainer>
+      {windowSize[0] > 600 ? desktopLayout : mobileLayout}
       {showTopArrow && (
         <div id="topArrow" onClick={scrollToTop}>
           <FaChevronUp />

@@ -30,13 +30,12 @@ export const CurrentProject = () => {
           </a>
           <h1>Currently working on Plantifi</h1>
           <h2>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqa.
+            Mobile app for managing and recognizing home plants. Created on react native and expo environment. Published on Google Play.
           </h2>
         </header>
         <div className="container">
           <img src={logo} alt="PlantifyApp" />
-          <a href={googleplay}>
+          <a className='githubLink' href={googleplay}>
             Get in on <strong>GooglePlay</strong>
             <FaGooglePlay />
           </a>
@@ -60,10 +59,9 @@ export const CurrentProject = () => {
           <header>
             <h1>Currently working on Plantifi</h1>
             <h2>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqa.
+              Mobile app for manage and recognizing home plants. Created on react native and expo enivoroment. Published on <a href={googleplay}>Google Play</a>.
             </h2>
-            <a target={'_blank'} href={gitHub}>
+            <a className='githubLink' target={'_blank'} href={gitHub}>
               Check it on <strong>GitHub</strong>
               <BsGithub />
             </a>

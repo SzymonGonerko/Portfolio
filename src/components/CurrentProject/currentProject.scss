@@ -41,7 +41,7 @@
       position: relative;
       flex-grow: 1;
       margin: 8px;
-      a {
+      .githubLink {
         @include googlePlayButton;
         strong {
           margin-top: 1px;
@@ -90,7 +90,7 @@
           }
         }
         .scrollbar-thumb {
-          width: 3px;
+          width: 4px;
           background: rgba(0, 0, 0, 0.114);
         }
         .scrollbar-track-y {
@@ -116,6 +116,9 @@
             padding-top: 0.8vw;
           }
           a {
+            color: black
+          }
+          .githubLink {
             @include googlePlayButton;
             position: static;
             font-weight: bold;

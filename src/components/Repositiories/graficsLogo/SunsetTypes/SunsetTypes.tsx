@@ -1,10 +1,15 @@
 import React from 'react';
 import './sunsetTypes.scss';
+import { Play } from '../Play/Play';
 
-export const SunsetTypes = () => {
+interface props {
+  live: string,
+}
+
+export const SunsetTypes = ({live}: props) => {
   return (
     <div className="sunsetTypes">
-      <div className="sun" />
+      <Play live={live}/>
     </div>
   );
 };

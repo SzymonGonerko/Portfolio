@@ -1,10 +1,15 @@
 import React from 'react';
 import './flow2Code.scss';
+import { Play } from '../Play/Play';
 
-export const Flow2Code = () => {
+interface props {
+  live: string,
+}
+
+export const Flow2Code = ({live}: props) => {
   return (
     <div className="flow2Code">
-      <div className="logo" />
+      <Play live={live}/>
     </div>
   );
 };
