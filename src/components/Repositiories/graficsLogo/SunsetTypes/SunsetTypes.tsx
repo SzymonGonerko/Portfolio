@@ -3,13 +3,13 @@ import './sunsetTypes.scss';
 import { Play } from '../Play/Play';
 
 interface props {
-  live: string,
+  live: string;
 }
 
-export const SunsetTypes = ({live}: props) => {
+export const SunsetTypes = ({ live }: props) => {
   return (
     <div className="sunsetTypes">
-      <Play live={live}/>
+      <Play live={live} />
     </div>
   );
 };

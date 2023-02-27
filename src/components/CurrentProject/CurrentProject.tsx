@@ -5,13 +5,17 @@ import { BsGithub } from 'react-icons/bs';
 import { ScrollContainer } from 'react-nice-scroll';
 const logo = require('../../assets/plantifiMobile.png');
 const photos = [
-  require('../../assets/plantifiPreview/1.png'),
-  require('../../assets/plantifiPreview/2.png'),
-  require('../../assets/plantifiPreview/3.png'),
-  require('../../assets/plantifiPreview/4.png'),
-  require('../../assets/plantifiPreview/5.png'),
-  require('../../assets/plantifiPreview/6.png'),
-  require('../../assets/plantifiPreview/7.png'),
+  require('../../assets/plantifiPreview/1.jpg'),
+  require('../../assets/plantifiPreview/2.jpg'),
+  require('../../assets/plantifiPreview/3.jpg'),
+  require('../../assets/plantifiPreview/4.jpg'),
+  require('../../assets/plantifiPreview/5.jpg'),
+  require('../../assets/plantifiPreview/6.jpg'),
+  require('../../assets/plantifiPreview/7.jpg'),
+  require('../../assets/plantifiPreview/8.jpg'),
+  require('../../assets/plantifiPreview/9.jpg'),
+  require('../../assets/plantifiPreview/10.jpg'),
+  require('../../assets/plantifiPreview/11.jpg'),
 ];
 
 export const CurrentProject = () => {
@@ -30,12 +34,13 @@ export const CurrentProject = () => {
           </a>
           <h1>Currently working on Plantifi</h1>
           <h2>
-            Mobile app for managing and recognizing home plants. Created on react native and expo environment. Published on Google Play.
+            Mobile app for managing and recognizing home plants. Created on
+            react native and expo environment. Published on Google Play.
           </h2>
         </header>
         <div className="container">
           <img src={logo} alt="PlantifyApp" />
-          <a className='githubLink' href={googleplay}>
+          <a className="githubLink" href={googleplay}>
             Get in on <strong>GooglePlay</strong>
             <FaGooglePlay />
           </a>
@@ -59,9 +64,11 @@ export const CurrentProject = () => {
           <header>
             <h1>Currently working on Plantifi</h1>
             <h2>
-              Mobile app for manage and recognizing home plants. Created on react native and expo enivoroment. Published on <a href={googleplay}>Google Play</a>.
+              Mobile app for manage and recognizing home plants. Created on
+              react native and expo enivoroment. Published on{' '}
+              <a href={googleplay}>Google Play</a>.
             </h2>
-            <a className='githubLink' target={'_blank'} href={gitHub}>
+            <a className="githubLink" target={'_blank'} href={gitHub}>
               Check it on <strong>GitHub</strong>
               <BsGithub />
             </a>

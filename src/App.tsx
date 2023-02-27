@@ -1,9 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './App.scss';
-import {
-  ScrollContainer,
-  useGlobalState,
-} from 'react-nice-scroll';
+import { ScrollContainer, useGlobalState } from 'react-nice-scroll';
 import 'react-nice-scroll/dist/styles.css';
 import { FaChevronUp } from 'react-icons/fa';
 
@@ -15,7 +12,6 @@ import { MoreInfo } from './components/MoreInfo/MoreInfo';
 
 const AnimatedCursor = require('react-animated-cursor');
 
-
 const App = () => {
   const [smoothScrollBar] = useGlobalState('smoothScrollBar');
   const [showTopArrow, setShowTopArrow] = useState(false);
@@ -25,37 +21,37 @@ const App = () => {
     window.innerHeight,
   ]);
 
-  const desktopLayout = <>
-  <AnimatedCursor
-    innerSize={10}
-    outerSize={7}
-    color="0, 0, 0"
-    outerAlpha={0.2}
-    trailingSpeed={1}
-    innerScale={0.4}
-    outerScale={5}
-    clickables={[
-      'a', 'button',
-    ]}
-  />
-  <ScrollContainer
-    damping={0.07}
-    thumbMinSize={10}
->
-  <Hero windowWidth={windowSize[0]} />
-  <CurrentProject />
-  <Repositories windowWidth={windowSize[0]}/>
-  <Skills />
-  <MoreInfo />
-</ScrollContainer></>;
+  const desktopLayout = (
+    <>
+      <AnimatedCursor
+        innerSize={10}
+        outerSize={7}
+        color="0, 0, 0"
+        outerAlpha={0.2}
+        trailingSpeed={1}
+        innerScale={0.4}
+        outerScale={5}
+        clickables={['a', 'button', 'p.title']}
+      />
+      <ScrollContainer damping={0.06} thumbMinSize={10}>
+        <Hero windowWidth={windowSize[0]} />
+        <CurrentProject />
+        <Repositories windowWidth={windowSize[0]} />
+        <Skills />
+        <MoreInfo />
+      </ScrollContainer>
+    </>
+  );
 
-const mobileLayout = <>
-<Hero windowWidth={windowSize[0]} />
-<CurrentProject />
-<Repositories windowWidth={windowSize[0]} />
-<Skills />
-<MoreInfo />
-</>
+  const mobileLayout = (
+    <>
+      <Hero windowWidth={windowSize[0]} />
+      <CurrentProject />
+      <Repositories windowWidth={windowSize[0]} />
+      <Skills />
+      <MoreInfo />
+    </>
+  );
 
   const handleWindowResize = () => {
     setWindowSize([window.innerWidth, window.innerHeight]);

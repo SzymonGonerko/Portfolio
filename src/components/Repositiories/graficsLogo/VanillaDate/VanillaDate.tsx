@@ -3,13 +3,13 @@ import './vanillaDate.scss';
 import { Play } from '../Play/Play';
 
 interface props {
-  live: string,
+  live: string;
 }
 
-export const VanillaDate = ({live}: props) => {
+export const VanillaDate = ({ live }: props) => {
   return (
     <div className="vanillaDate">
-        <Play live={live}/>
+      <Play live={live} />
     </div>
   );
 };

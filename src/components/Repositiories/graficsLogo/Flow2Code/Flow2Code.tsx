@@ -3,13 +3,13 @@ import './flow2Code.scss';
 import { Play } from '../Play/Play';
 
 interface props {
-  live: string,
+  live: string;
 }
 
-export const Flow2Code = ({live}: props) => {
+export const Flow2Code = ({ live }: props) => {
   return (
     <div className="flow2Code">
-      <Play live={live}/>
+      <Play live={live} />
     </div>
   );
 };

@@ -3,13 +3,13 @@ import './sgWorld.scss';
 import { Play } from '../Play/Play';
 
 interface props {
-  live: string,
+  live: string;
 }
 
-export const SGWorld = ({live} : props) => {
+export const SGWorld = ({ live }: props) => {
   return (
     <div className="SGWorld">
-        <Play live={live}/>
+      <Play live={live} />
     </div>
   );
 };

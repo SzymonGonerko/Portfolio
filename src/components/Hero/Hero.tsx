@@ -27,8 +27,11 @@ export const Hero = (props: propsTypes) => {
   return (
     <section className="hero link">
       <div className="basicInfoBox">
-        <p className='descriptionMyself'>
-        I'm graduate of the IT CodersLab school with specialization in React. When I was writing my dyploma app, I noticed how beautiful generative art can be. I wish to follow this path. I'm ready to work with you on commercial projects. 
+        <p className="descriptionMyself">
+          I'm graduate of the IT CodersLab school with specialization in React.
+          When I was writing my dyploma app, I noticed how beautiful generative
+          art can be. I wish to follow this path. I'm ready to work with you on
+          commercial projects.
         </p>
         <nav>
           <ul>
@@ -38,19 +41,16 @@ export const Hero = (props: propsTypes) => {
               </button>
             </li>
             <li>
-              <button onClick={() => handleScrollTo('repo')}>
-                2
-              </button>
+              <button onClick={() => handleScrollTo('repo')}>2</button>
             </li>
             <li>
-              <button onClick={() => handleScrollTo('skills')}>
-                3
-              </button>
+              <button onClick={() => handleScrollTo('skills')}>3</button>
             </li>
             <li>
-              <button onClick={() => handleScrollTo('moreInfo')}>
-                4
-              </button>
+              <button onClick={() => handleScrollTo('moreInfo')}>4</button>
+            </li>
+            <li>
+              <div className="myself" />
             </li>
           </ul>
         </nav>

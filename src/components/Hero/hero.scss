@@ -46,6 +46,9 @@
             color: #c1c1c1;
             border-radius: 200px;
           }
+          .myself {
+            display: none;
+          }
         }
       }
     }
@@ -128,7 +131,7 @@
         ul {
           list-style: none;
           display: flex;
-          width: 22%;
+          width: 24%;
           justify-content: space-between;
           li {
             padding-bottom: 0;
@@ -146,6 +149,22 @@
               transition: 0.2s;
               &:hover {
                 color: black;
+              }
+            }
+            .myself {
+              display: block;
+              background-color: #e1e1e1;
+              border-radius: 200px;
+              width: 1.5vw;
+              height: 1.5vw;
+              margin-left: 40px;
+              transition: 0.2s;
+              &:hover {
+                transform: scale(6);
+                background-image: url(./myself.jpg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
               }
             }
           }
