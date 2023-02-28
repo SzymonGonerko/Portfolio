@@ -17,7 +17,7 @@ const repositories = [
     library: 'Vanilla JS',
     logo: <VanillaDate live={'https://vanilla-date.netlify.app'} />,
     github: 'https://github.com/SzymonGonerko/Vanilla-Date',
-    description: `Dating app, written in a React library. Placed on a Firebase with user authentication and real time chat. Design inspired by the movie "The Shape of Water" dir. Guillermo del Toro`,
+    description: `Dating app, written in a React library. Placed on a Firebase with user authentication and real time chat.`,
   },
   {
     name: 'SGWorld',
@@ -25,7 +25,7 @@ const repositories = [
     library: 'Three.js',
     logo: <SGWorld live={'https://sgworld.netlify.app'} />,
     github: 'https://github.com/SzymonGonerko/SGWorld',
-    description: `Reflection of my living place. Project 3D include my myliving place, inspirations and real exissting things`,
+    description: `Virtual reflection of my livingplace. Project 3D include my inspirations, phanthasis and real objects crated on Blender. `,
   },
   {
     name: 'SunsetTypes',
@@ -33,7 +33,7 @@ const repositories = [
     library: 'TypeScript/Redux',
     logo: <SunsetTypes live={'https://sunsettypes.netlify.app'} />,
     github: 'https://github.com/SzymonGonerko/Sunset-Types',
-    description: `An experimental app includes the toDoList and calculator on 3D space. Compontnts are placed in sunset scenery. It's up to You whitch sunset type you choose ;)`,
+    description: `An experimental app includes the todolist and calculator on 3D space. Compontnts are placed in sunset scenery.`,
   },
   {
     name: 'Flow2CodeGame',

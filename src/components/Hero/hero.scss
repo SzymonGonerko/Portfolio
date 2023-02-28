@@ -15,7 +15,6 @@
   font-family: 'Apfel';
   .basicInfoBox {
     position: relative;
-    // height: 100%;
     top: 24%;
     left: 0;
     right: 0;
@@ -27,28 +26,44 @@
       text-align: justify;
     }
     nav {
+      width: 100%;
       padding-top: 2vh;
       ul {
         list-style: none;
+        width: 77%;
         display: flex;
+        justify-content: space-between;
         li {
-          padding-bottom: 0.5vh;
-          width: 15%;
           button {
             font-size: 4vw;
             display: block;
-            width: 5.5vw;
-            height: 5.5vw;
+            width: 5.4vw;
+            height: 5.4vw;
             border-radius: 200px;
-            background-color: #c1c1c1;
+            background-color: #e1e1e1;
             border: none;
             text-decoration: none;
-            color: #c1c1c1;
+            color: #e1e1e1;
             border-radius: 200px;
           }
           .myself {
-            display: none;
+            display: block;
+            background-color: #e1e1e1;
+            border-radius: 200px;
+            width: 5.4vw;
+            height: 5.4vw;
+            transition: 0.2s;
+            &:hover {
+              transform: scale(6);
+              background-image: url(./myself.jpg);
+              background-position: center;
+              background-repeat: no-repeat;
+              background-size: cover;
+            }
           }
+        &:last-of-type {
+          padding-left: 7vw;
+        }
         }
       }
     }
@@ -107,8 +122,6 @@
   .hero {
     position: static;
     display: flex;
-    justify-content: center;
-    height: 100vh;
     font-family: 'Apfel';
     .basicInfoBox {
       position: static;
@@ -120,7 +133,6 @@
         padding-top: 10vw;
         font-size: 1.4vw;
         max-width: 78%;
-        text-align: justify;
         padding-left: 0;
       }
       nav {
@@ -131,10 +143,11 @@
         ul {
           list-style: none;
           display: flex;
-          width: 24%;
+          width: 35%;
           justify-content: space-between;
           li {
             padding-bottom: 0;
+            width: 10%;
             button {
               font-size: 1.2vw;
               display: block;
@@ -157,7 +170,7 @@
               border-radius: 200px;
               width: 1.5vw;
               height: 1.5vw;
-              margin-left: 40px;
+              margin-left: 2.5vw;
               transition: 0.2s;
               &:hover {
                 transform: scale(6);
@@ -166,6 +179,9 @@
                 background-repeat: no-repeat;
                 background-size: cover;
               }
+            }
+            &:last-of-type {
+              padding-left: 0;
             }
           }
         }
