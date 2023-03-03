@@ -31,10 +31,10 @@ const App = () => {
         trailingSpeed={1}
         innerScale={0.4}
         outerScale={5}
-        clickables={['a', 'button', 'p.title']}
+        clickables={['a', 'button', 'p.title', 'span.event']}
       />
       <ScrollContainer damping={0.06} thumbMinSize={10}>
-        <Hero windowWidth={windowSize[0]} />
+        <Hero />
         <CurrentProject />
         <Repositories windowWidth={windowSize[0]} />
         <Skills />
@@ -45,7 +45,7 @@ const App = () => {
 
   const mobileLayout = (
     <>
-      <Hero windowWidth={windowSize[0]} />
+      <Hero />
       <CurrentProject />
       <Repositories windowWidth={windowSize[0]} />
       <Skills />

@@ -7,235 +7,202 @@
   right: 0;
   top: 0;
   bottom: 0;
-  justify-content: center;
-  align-items: center;
   height: 100vh;
   background-color: #ffffff;
   font-size: 40px;
   font-family: 'Apfel';
-  .basicInfoBox {
-    position: relative;
-    top: 24%;
+  .circleNav {
+    position: absolute;
+    top: 7%;
     left: 0;
     right: 0;
-    padding-left: 5.5vw;
-    .descriptionMyself {
-      padding-top: 7vw;
-      font-size: 4.7vw;
-      max-width: 77%;
-      text-align: justify;
-    }
-    nav {
-      width: 100%;
-      padding-top: 2vh;
-      ul {
-        list-style: none;
-        width: 77%;
-        display: flex;
-        justify-content: space-between;
-        li {
-          button {
-            font-size: 4vw;
-            display: block;
-            width: 5.4vw;
-            height: 5.4vw;
-            border-radius: 200px;
-            background-color: #e1e1e1;
-            border: none;
-            text-decoration: none;
-            color: #e1e1e1;
-            border-radius: 200px;
+    ul {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      gap: 4vw;
+      list-style: none;
+      li {
+        button {
+          display: block;
+          font-family: 'Apfel';
+          width: 8vw;
+          height: 8vw;
+          background-color: #424242;
+          color: #424242;
+          border-radius: 200px;
+          transition: 0.3s;
+          border: none;
+          font-size: 1.5vw;
+          &:hover {
+            color: white;
           }
-          .myself {
-            display: block;
-            background-color: #e1e1e1;
-            border-radius: 200px;
-            width: 5.4vw;
-            height: 5.4vw;
-            transition: 0.2s;
-            &:hover {
-              transform: scale(6);
-              background-image: url(./myself.jpg);
-              background-position: center;
-              background-repeat: no-repeat;
-              background-size: cover;
-            }
-          }
-        &:last-of-type {
-          padding-left: 7vw;
         }
+        .myself {
+          width: 8vw;
+          height: 8vw;
+          background-color: #424242;
+          border-radius: 200px;
+          transition: 0.3s;
+          &:hover {
+            background-image: url(./myself.jpg);
+            transform: scale(3.5);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+          }
         }
       }
     }
   }
-
-  .helloBox {
+  .generalInfo {
     position: absolute;
-    top: 5%;
-    left: 0;
-    right: 0;
-    width: 100%;
-    .wrapper {
-      position: absolute;
-      bottom: -47vh;
-      right: -50%;
-      height: 14vw;
-      width: 60%;
-      transform: translate(-48%, 0%) rotate(-90deg);
-      h1 {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        font-size: 6vw;
-        &::after {
-          content: '';
-          display: block;
-          width: 140%;
-          height: 0.5px;
-          background-color: black;
-          margin-top: 0.5vh;
-        }
-      }
+    top: 38.5%;
+    left: 11%;
+    right: 0%;
+    h1 {
+      font-size: 8vw;
+      text-transform: uppercase;
+      font-weight: 400;
+      letter-spacing: -0.28vw;
+      transform: translate(-5%, 0);
+    }
+    .info {
+      display: flex;
+      flex-direction: column;
       h2 {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        font-size: 4.8vw;
+        font-size: 8vw;
+        font-weight: 800;
+        letter-spacing: -0.28vw;
+        font-family: 'ApfelFett';
+        text-transform: uppercase;
+      }
+      h3 {
+        font-size: 8vw;
+        text-transform: uppercase;
+        font-weight: 400;
+        letter-spacing: -0.28vw;
       }
     }
-    svg {
-      width: 100%;
-      height: 100%;
-      transform: translate(0%, -10%);
-      text {
-        font-size: 11.5vw;
-        animation: strokeMobile 6s forwards;
-        transition: 0.2s;
-        letter-spacing: -2px;
-      }
+    .description {
+      color: #A0A0A0;
+      font-size: 4vw;
+      max-width: 75%;
+      font-weight: 400;
+      line-height: 140%;
     }
   }
 }
 
 @media (min-width: 600px) {
   .hero {
-    position: static;
-    display: flex;
+    position: relative;
+    overflow: hidden;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 100vh;
+    background-color: #ffffff;
+    font-size: 40px;
     font-family: 'Apfel';
-    .basicInfoBox {
-      position: static;
-      background-color: rgb(255, 255, 255);
-      width: 50%;
-      height: 100%;
-      padding: 0.8vh 1.2vh;
-      .descriptionMyself {
-        padding-top: 10vw;
-        font-size: 1.4vw;
-        max-width: 78%;
-        padding-left: 0;
-      }
-      nav {
-        font-size: 1.8vw;
-        padding-left: 0;
-        padding-top: 1.5vw;
-        width: 100%;
-        ul {
-          list-style: none;
-          display: flex;
-          width: 35%;
-          justify-content: space-between;
-          li {
-            padding-bottom: 0;
-            width: 10%;
-            button {
-              font-size: 1.2vw;
-              display: block;
-              width: 1.5vw;
-              height: 1.5vw;
-              background-color: transparent;
-              border: none;
-              text-decoration: none;
-              color: #e1e1e1;
-              background-color: #e1e1e1;
-              border-radius: 200px;
-              transition: 0.2s;
-              &:hover {
-                color: black;
-              }
+    .circleNav {
+      position: absolute;
+      top: 10%;
+      left: 0;
+      right: 0;
+      ul {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 5vw;
+        list-style: none;
+        li {
+          button {
+            display: block;
+            font-family: 'Apfel';
+            width: 2.5vw;
+            height: 2.5vw;
+            background-color: #424242;
+            color: #424242;
+            border-radius: 200px;
+            transition: 0.3s;
+            border: none;
+            font-size: 1.5vw;
+            &:hover {
+              color: white;
             }
-            .myself {
-              display: block;
-              background-color: #e1e1e1;
-              border-radius: 200px;
-              width: 1.5vw;
-              height: 1.5vw;
-              margin-left: 2.5vw;
-              transition: 0.2s;
-              &:hover {
-                transform: scale(6);
-                background-image: url(./myself.jpg);
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: cover;
-              }
-            }
-            &:last-of-type {
-              padding-left: 0;
+          }
+          .myself {
+            width: 2.5vw;
+            height: 2.5vw;
+            background-color: #424242;
+            border-radius: 200px;
+            transition: 0.3s;
+            &:hover {
+              background-image: url(./myself.jpg);
+              transform: scale(3.5);
+              background-position: center;
+              background-repeat: no-repeat;
+              background-size: cover;
             }
           }
         }
       }
     }
-    .helloBox {
-      position: static;
-      background-color: #e1e1e1;
-      width: 50%;
-      height: 100%;
-      .wrapper {
-        position: static;
-        padding: 0.27vw 1.38vw 0 1.2vh;
-        background-color: transparent;
-        transform: translate(-100%, 0%);
-        width: 100%;
-        height: auto;
-        h1 {
-          position: static;
-          height: auto;
-          font-size: 3.5vw;
-          letter-spacing: -0.07vw;
-          font-weight: 400;
-          transform: none;
-          &::after {
-            content: '';
-            display: block;
-            width: 100%;
-            height: 1px;
-            background-color: black;
-            margin-top: 2px;
-          }
-        }
+    .generalInfo {
+      position: relative;
+      top: 36%;
+      left: 11%;
+      right: 0%;
+      h1 {
+        font-size: 4.5vw;
+        text-transform: uppercase;
+        font-weight: 400;
+        letter-spacing: -0.28vw;
+        transform: none;
+      }
+
+      .info {
+        display: flex;
+        flex-direction: row;
+        gap: 1.5vw;
         h2 {
-          position: static;
-          transform: none;
-          font-size: 1.81vw;
-          margin-top: 0.2vw;
+          font-size: 3vw;
+          font-weight: 800;
+          font-size: 4.5vw;
+          letter-spacing: -0.28vw;
+          font-family: 'ApfelFett';
+          text-transform: uppercase;
+        }
+        h3 {
+          font-size: 4.5vw;
+          text-transform: uppercase;
           font-weight: 400;
-          letter-spacing: -0.07vw;
-          & span {
-            font-family: 'ApfelFett';
-            letter-spacing: -0.07vw;
-          }
+          letter-spacing: -0.28vw;
         }
       }
-      svg {
-        width: 100%;
-        height: 100%;
-        text {
-          font-size: 7vw;
-          animation: stroke 7s forwards;
-          transition: 0.6s;
-          letter-spacing: -0.27vw;
+      .description {
+        color: #A0A0A0;
+        font-size: 1.11vw;
+        max-width: 28%;
+        font-weight: 400;
+        line-height: 140%;
+        span {
+          color: black;
+          position: relative;
+          display: inline-block;
+          transition: 0.3s;
+          .line {
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            bottom: 2px;
+            left: 0;
+            background-color: black;
+          }
         }
       }
     }

@@ -1,21 +1,21 @@
 @keyframes stroke {
   0% {
-    fill: rgba(72, 138, 20, 0);
-    stroke: rgb(133, 133, 133);
+    fill: rgb(255, 255, 255);
+    stroke: rgb(0, 0, 0);
     stroke-dashoffset: 0%;
     stroke-dasharray: 0 50%;
     stroke-width: 0.5;
   }
-  80% {
-    fill: rgba(72, 138, 20, 0);
-    stroke: rgb(133, 133, 133);
+  70% {
+    fill: rgb(255, 255, 255);
+    stroke: rgb(0, 0, 0);
     stroke-width: 1;
   }
   100% {
     fill: rgb(0, 0, 0);
-    stroke: rgb(133, 133, 133);
+    stroke: rgb(0, 0, 0);
     stroke-dashoffset: -20%;
-    stroke-dasharray: 50% 0;
+    stroke-dasharray: 40% 0;
     stroke-width: 0;
   }
 }

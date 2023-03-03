@@ -3,7 +3,9 @@ import './currentProject.scss';
 import { FaGooglePlay } from 'react-icons/fa';
 import { BsGithub } from 'react-icons/bs';
 import { ScrollContainer } from 'react-nice-scroll';
-const logo = require('../../assets/plantifiMobile.png');
+import logo from "../../assets/plantifiMobile.png"
+
+
 const photos = [
   require('../../assets/plantifiPreview/1.jpg'),
   require('../../assets/plantifiPreview/2.jpg'),
@@ -17,6 +19,7 @@ const photos = [
   require('../../assets/plantifiPreview/10.jpg'),
   require('../../assets/plantifiPreview/11.jpg'),
 ];
+
 
 export const CurrentProject = () => {
   const googleplay =

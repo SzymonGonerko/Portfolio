@@ -1,16 +1,15 @@
-import React from 'react';
+import React, { useState, useRef } from 'react';
 import './hero.scss';
 import { useGlobalState } from 'react-nice-scroll';
+import { SocialEvent } from './SocialEvent/SocialEvent';
 
-interface propsTypes {
-  windowWidth: number;
-}
 
-export const Hero = (props: propsTypes) => {
-  const { windowWidth } = props;
+export const Hero = () => {
   const [smoothScrollBar] = useGlobalState('smoothScrollBar');
+  const [showEvent, setShowEvent] = useState(false)
 
-  const handleScrollTo = (whitch: string) => {
+
+  const scrollTo = (whitch: string) => {
     const links = document.querySelectorAll(
       '.link'
     ) as unknown as HTMLElement[];
@@ -24,63 +23,89 @@ export const Hero = (props: propsTypes) => {
     }
   };
 
+  const onHandleClick = () => {
+    setShowEvent(true)
+    const line = document.querySelector('.description span .line') as unknown as HTMLElement
+    line.style.width = "215%"
+    line.style.height = "2px"
+  }
+
+  const onMouseLeave = () => {
+    const line = document.querySelector('.description span .line') as unknown as HTMLElement
+    line.style.width = "100%"
+    line.style.height = "1px"
+    setShowEvent(false)
+  }
+
   return (
     <section className="hero link">
-      <div className="basicInfoBox">
-        <p className="descriptionMyself">
-          I'm graduate of the IT CodersLab school with specialization in React.
-          When I was writing my dyploma app, I noticed how beautiful generative
-          art can be. I wish to follow this path. I'm ready to work with you on
-          commercial projects.
-        </p>
-        <nav>
+        <nav className='circleNav'>
           <ul>
             <li>
-              <button onClick={() => handleScrollTo('currentProject')}>
+              <button onClick={() => scrollTo('currentProject')}>
                 1
               </button>
             </li>
             <li>
-              <button onClick={() => handleScrollTo('repo')}>2</button>
+              <button onClick={() => scrollTo('repo')}>
+                2
+              </button>
             </li>
             <li>
-              <button onClick={() => handleScrollTo('skills')}>3</button>
+              <button onClick={() => scrollTo('skills')}>
+                3
+              </button>
             </li>
             <li>
-              <button onClick={() => handleScrollTo('moreInfo')}>4</button>
+              <button onClick={() => scrollTo('moreInfo')}>
+                4
+              </button>
             </li>
             <li>
               <div className="myself" />
             </li>
           </ul>
         </nav>
-      </div>
 
-      <div className="helloBox">
-        <div className="wrapper">
+        <header className='generalInfo'>
           <h1>Szymon Gonerko</h1>
-          <h2>
-            <span>Frontend&nbsp;</span>
-            developer
-          </h2>
-        </div>
-        <svg>
-          <text
-            x="2%"
-            y={windowWidth < 600 ? '38%' : windowWidth < 900 ? '45%' : '45%'}
-            textAnchor="left"
-          >
-            Hello It's nice to {windowWidth < 600 ? 'see' : ''}
-          </text>
-          <text
-            x="2%"
-            y={windowWidth < 600 ? '65%' : windowWidth < 950 ? '51%' : '55%'}
-            textAnchor="left"
-          >
-            {windowWidth < 600 ? 'you ;-)' : 'see you ;-)'}
-          </text>
-        </svg>
-      </div>
+          <div className='info'>
+            <h2>Frontend Developer</h2>
+            <h3>Based in Wrocław</h3>
+          </div>
+          <p className='description'>
+          I'm graduate of the IT CodersLab school with specialization in React and React Native.
+          On the last project I had pleasure cooperete with 7 persons team in sprintlog scrum system. 
+          I incessantly participate at <span className='event' onClick={onHandleClick} onMouseLeave={onMouseLeave}>programming events. <span className='line'/></span>
+          When I was writing my dyploma app, I noticed how beautiful generative
+          art can be. I follow this path. I'm ready to work with you on
+          commercial projects.
+          </p>
+          {showEvent && <SocialEvent/>}
+        </header>
+
+        
     </section>
   );
 };
+
+
+
+{/* <svg>
+<text
+  x="2%"
+  y={windowWidth < 600 ? '38%' : windowWidth < 900 ? '45%' : '45%'}
+  textAnchor="left"
+>
+  Hello It's nice to {windowWidth < 600 ? 'see' : ''}
+</text>
+<text
+  x="2%"
+  y={windowWidth < 600 ? '65%' : windowWidth < 950 ? '51%' : '55%'}
+  textAnchor="left"
+>
+  {windowWidth < 600 ? 'you ;-)' : 'see you ;-)'}
+</text>
+</svg> */}
+
+
