@@ -9,6 +9,7 @@ import { SGWorld } from './graficsLogo/SGWorld/SGWorld';
 import { SunsetTypes } from './graficsLogo/SunsetTypes/SunsetTypes';
 import { Flow2Code } from './graficsLogo/Flow2Code/Flow2Code';
 import { OptimoDev } from './graficsLogo/OptimoDev/OptimoDev';
+import { BsGithub } from 'react-icons/bs';
 
 const repositories = [
   {
@@ -59,6 +60,7 @@ interface props {
 
 export const Repositories = ({ windowWidth }: props) => {
   const projects = useRef<any>(null);
+  const gitHub = 'https://github.com/SzymonGonerko';
 
   useEffect(() => {
     projects.current.scroll(projects.current.offsetWidth / 2, 0);
@@ -107,7 +109,13 @@ export const Repositories = ({ windowWidth }: props) => {
       <div className="repoInfo">
         <header>
           <h1>Repositories</h1>
-          <h2>My repositories on GitHub</h2>
+          <h2>
+            An experimental projects using different technologies. Two of them were recruiment task for companies from Poznań and Łódź.
+          </h2>
+          <a className="githubLink" target={'_blank'} href={gitHub}>
+              Check <strong>GitHub</strong>
+              <BsGithub />
+            </a>
         </header>
       </div>
       <div ref={projects} className="projects">

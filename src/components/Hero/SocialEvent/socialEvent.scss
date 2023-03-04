@@ -1,12 +1,10 @@
 @use '../../animations.scss' as *;
 
-
 .circleVideo {
     position: absolute;
-    top: 60%;
+    top: 57%;
     left: 38%;
-    width: 33.5vw;
-    height: 19vw;
+    height: 32vh;
     border-radius: 12px;
     animation: 0.3s visibility forwards;
     border: 2px solid black;

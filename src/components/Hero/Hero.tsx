@@ -26,7 +26,7 @@ export const Hero = () => {
   const onHandleClick = () => {
     setShowEvent(true)
     const line = document.querySelector('.description span .line') as unknown as HTMLElement
-    line.style.width = "215%"
+    line.style.width = "213%"
     line.style.height = "2px"
   }
 
@@ -43,22 +43,22 @@ export const Hero = () => {
           <ul>
             <li>
               <button onClick={() => scrollTo('currentProject')}>
-                1
+               CurrentProject
               </button>
             </li>
             <li>
               <button onClick={() => scrollTo('repo')}>
-                2
+                Repositories
               </button>
             </li>
             <li>
               <button onClick={() => scrollTo('skills')}>
-                3
+                Skillsset
               </button>
             </li>
             <li>
               <button onClick={() => scrollTo('moreInfo')}>
-                4
+                Contact
               </button>
             </li>
             <li>

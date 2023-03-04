@@ -28,7 +28,7 @@ export const Card = ({
             <p className="date">{finished}</p>
             <p className="library">{library}</p>
           </div>
-          <p className="title">{name}</p>
+          <p className="projectTitle">{name}</p>
           <p className="description">{description}</p>
           <a className="githubLink" href={github}>
             check on github

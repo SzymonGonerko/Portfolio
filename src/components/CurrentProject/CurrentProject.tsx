@@ -29,12 +29,6 @@ export const CurrentProject = () => {
     <section className="currentProject link">
       <div className="wrapperMobile">
         <header>
-          <a
-            className="linkedIn"
-            href="https://www.linkedin.com/in/szymon-gonerko-b64504237/"
-          >
-            visit my on LinkedIn
-          </a>
           <h1>Currently working on Plantifi</h1>
           <h2>
             Mobile app for managing and recognizing home plants. Created on
@@ -43,7 +37,7 @@ export const CurrentProject = () => {
         </header>
         <div className="container">
           <img src={logo} alt="PlantifyApp" />
-          <a className="githubLink" href={googleplay}>
+          <a className="githubLink" href={googleplay} target={'_blank'}>
             Get in on <strong>GooglePlay</strong>
             <FaGooglePlay />
           </a>
@@ -69,7 +63,7 @@ export const CurrentProject = () => {
             <h2>
               Mobile app for manage and recognizing home plants. Created on
               react native and expo enivoroment. Published on{' '}
-              <a href={googleplay}>Google Play</a>.
+              <a target={'_blank'} href={googleplay}>Google Play</a>.
             </h2>
             <a className="githubLink" target={'_blank'} href={gitHub}>
               Check it on <strong>GitHub</strong>

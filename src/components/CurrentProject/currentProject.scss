@@ -18,12 +18,6 @@
       display: flex;
       flex-direction: column;
       padding: 8px 8px 0 8px;
-      .linkedIn {
-        font-size: 4.3vw;
-        font-family: 'Apfel', sans-serif;
-        color: red;
-        text-transform: none;
-      }
       h1 {
         padding-top: 8px;
         font-size: 6vw;
@@ -72,7 +66,7 @@
       .plantifiScrollBox {
         display: flex;
         flex-direction: column;
-        background-color: #e1e1e1;
+        background-color: #ffffff;
         width: 50%;
         height: 100%;
         .containerImg {
@@ -81,12 +75,14 @@
           margin: 64px;
           justify-content: center;
           align-items: center;
+          
           img {
             display: block;
             width: 213px;
             height: 462px;
             box-shadow: 57px 84px 120px -90px rgba(66, 68, 90, 1);
             border-radius: 26px;
+            border: 1px solid black;
           }
         }
         .scrollbar-thumb {
@@ -106,8 +102,9 @@
           width: 100%;
           padding: 4.5vw 4vw 0 4vw;
           h1 {
-            font-size: 3.5vw;
+            font-size: 7vw;
             letter-spacing: -0.07vw;
+            font-family: 'ApfelFett';
             font-weight: 400;
           }
           h2 {
