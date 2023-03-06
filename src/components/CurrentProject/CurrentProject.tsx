@@ -3,8 +3,7 @@ import './currentProject.scss';
 import { FaGooglePlay } from 'react-icons/fa';
 import { BsGithub } from 'react-icons/bs';
 import { ScrollContainer } from 'react-nice-scroll';
-import logo from "../../assets/plantifiMobile.png"
-
+import logo from '../../assets/plantifiMobile.png';
 
 const photos = [
   require('../../assets/plantifiPreview/1.jpg'),
@@ -20,12 +19,12 @@ const photos = [
   require('../../assets/plantifiPreview/11.jpg'),
 ];
 
-
 export const CurrentProject = () => {
   const googleplay =
     'https://play.google.com/store/apps/details?id=com.szymon1993.plantifi&fbclid=IwAR1lFjFubjrQVmCLFPci3drZMK5Of24S_g6VZRTed0MhHnqj1L0WfI1s1to';
   const gitHub = 'https://github.com/SzymonGonerko/Plantifi';
-  const figma = 'https://www.figma.com/file/9Mjrr6WzPrrUpFpVoT0SNq/Plantify?node-id=0%3A1&t=Xf1BUP9QcTjHQpYt-0'
+  const figma =
+    'https://www.figma.com/file/9Mjrr6WzPrrUpFpVoT0SNq/Plantify?node-id=0%3A1&t=Xf1BUP9QcTjHQpYt-0';
   return (
     <section className="currentProject link">
       <div className="wrapperMobile">
@@ -62,9 +61,16 @@ export const CurrentProject = () => {
           <header>
             <h1>Currently working on Plantifi</h1>
             <h2>
-              Mobile app for manage and recognizing home plants. Created by 7 UX coworkers on <a target={'_blank'} href={figma}>Figma</a> Based on
-              React Native and Expo enivoroment. Published on{' '}
-              <a target={'_blank'} href={googleplay}>Google Play</a>.
+              Mobile app for manage and recognizing home plants. Created by 7 UX
+              coworkers on{' '}
+              <a target={'_blank'} href={figma}>
+                Figma
+              </a>{' '}
+              Based on React Native and Expo enivoroment. Published on{' '}
+              <a target={'_blank'} href={googleplay}>
+                Google Play
+              </a>
+              .
             </h2>
             <a className="githubLink" target={'_blank'} href={gitHub}>
               Check it on <strong>GitHub</strong>

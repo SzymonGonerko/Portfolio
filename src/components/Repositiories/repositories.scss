@@ -64,40 +64,40 @@
       background-color: #ffffff;
       justify-content: center;
       align-items: center;
-      
+
       header {
-          display: flex;
-          position: relative;
-          flex-direction: column;
-          padding: 0;
-          width: 100%;
-          padding: 0vw 4vw 7vw 4vw;
-          h1 {
-            font-size: 8vw;
-            letter-spacing: -0.07vw;
-            text-align: left;
-            font-family: 'ApfelFett';
-            font-weight: 400;
-          }
-          h2 {
-            font-size: 1.2vw;
-            letter-spacing: normal;
-            font-weight: 400;
-            padding-top: 0.8vw;
-            padding-left: 0;
-            max-width: 60%;
-          }
-          .githubLink {
-            @include googlePlayButton;
-            position: static;
-            font-weight: bold;
-            transform: none;
-            width: 15vw;
-            height: 4vw;
-            font-size: 1.2vw;
-            margin-top: 2vw;
-            margin-left: 0;
-          }
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        padding: 0;
+        width: 100%;
+        padding: 0vw 4vw 7vw 4vw;
+        h1 {
+          font-size: 8vw;
+          letter-spacing: -0.07vw;
+          text-align: left;
+          font-family: 'ApfelFett';
+          font-weight: 400;
+        }
+        h2 {
+          font-size: 1.2vw;
+          letter-spacing: normal;
+          font-weight: 400;
+          padding-top: 0.8vw;
+          padding-left: 0;
+          max-width: 60%;
+        }
+        .githubLink {
+          @include googlePlayButton;
+          position: static;
+          font-weight: bold;
+          transform: none;
+          width: 15vw;
+          height: 4vw;
+          font-size: 1.2vw;
+          margin-top: 2vw;
+          margin-left: 0;
+        }
       }
     }
     .projects {
