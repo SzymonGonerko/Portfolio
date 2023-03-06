@@ -110,7 +110,7 @@ export const Repositories = ({ windowWidth }: props) => {
         <header>
           <h1>Repositories</h1>
           <h2>
-            An experimental projects using different technologies. Two of them were recruiment task for companies from Poznań and Łódź.
+            Experimental projects using different technologies and environments. Two of them were recruiment game for companies from Poznań and Łódź.
           </h2>
           <a className="githubLink" target={'_blank'} href={gitHub}>
               Check <strong>GitHub</strong>
