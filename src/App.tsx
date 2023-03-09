@@ -31,7 +31,15 @@ const App = () => {
         trailingSpeed={1}
         innerScale={0.4}
         outerScale={5}
-        clickables={['a', 'button', 'p.title', 'span.event']}
+        clickables={[
+          'a',
+          'button',
+          'p.title',
+          'span.event',
+          'input',
+          'textarea',
+          'div.MuiInputBase-root',
+        ]}
       />
       <ScrollContainer damping={0.06} thumbMinSize={10}>
         <Hero />

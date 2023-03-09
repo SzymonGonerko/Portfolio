@@ -61,7 +61,7 @@ export const CurrentProject = () => {
           <header>
             <h1>Currently working on Plantifi</h1>
             <h2>
-              Mobile app for manage and recognizing home plants. Created by 7 UX
+              Mobile app for manage and recognizing home plants. Created by 5 UX
               coworkers on{' '}
               <a target={'_blank'} href={figma}>
                 Figma
