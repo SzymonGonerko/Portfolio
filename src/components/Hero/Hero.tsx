@@ -89,22 +89,3 @@ export const Hero = () => {
     </section>
   );
 };
-
-{
-  /* <svg>
-<text
-  x="2%"
-  y={windowWidth < 600 ? '38%' : windowWidth < 900 ? '45%' : '45%'}
-  textAnchor="left"
->
-  Hello It's nice to {windowWidth < 600 ? 'see' : ''}
-</text>
-<text
-  x="2%"
-  y={windowWidth < 600 ? '65%' : windowWidth < 950 ? '51%' : '55%'}
-  textAnchor="left"
->
-  {windowWidth < 600 ? 'you ;-)' : 'see you ;-)'}
-</text>
-</svg> */
-}
