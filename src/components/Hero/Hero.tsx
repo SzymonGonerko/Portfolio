@@ -2,8 +2,14 @@ import React, { useState, useRef } from 'react';
 import './hero.scss';
 import { useGlobalState } from 'react-nice-scroll';
 import { SocialEvent } from './SocialEvent/SocialEvent';
+import {MdOutlineLightMode, MdOutlineNightlight} from "react-icons/md"
 
-export const Hero = () => {
+interface props {
+darkmood: boolean,
+setDarkMood: React.Dispatch<React.SetStateAction<boolean>>
+}
+
+export const Hero = ({darkmood, setDarkMood} : props) => {
   const [smoothScrollBar] = useGlobalState('smoothScrollBar');
   const [showEvent, setShowEvent] = useState(false);
 
@@ -45,7 +51,7 @@ export const Hero = () => {
         <ul>
           <li>
             <button onClick={() => scrollTo('currentProject')}>
-              CurrentProject
+              Current&nbsp;project
             </button>
           </li>
           <li>
@@ -58,7 +64,9 @@ export const Hero = () => {
             <button onClick={() => scrollTo('moreInfo')}>Contact</button>
           </li>
           <li>
-            <div className="myself" />
+            <button aria-label='toggle theme website' className='toggle' onClick={() => setDarkMood((p) => !p)}>
+              {darkmood ? <MdOutlineNightlight style={{transform: "translate(0, 0.13vw)"}}/> : <MdOutlineLightMode style={{transform: "translate(0, 0.13vw)"}}/>}
+            </button>
           </li>
         </ul>
       </nav>
@@ -71,7 +79,7 @@ export const Hero = () => {
         </div>
         <p className="description">
           I'm graduate of the IT CodersLab school with specialization in React
-          and React Native. On the last project I had pleasure cooperete with 7
+          and React Native. On the last project I had pleasure cooperete with 5
           persons team in sprintlog scrum system. I incessantly participate at{' '}
           <span
             className="event"
@@ -79,7 +87,7 @@ export const Hero = () => {
             onMouseLeave={onMouseLeave}
           >
             programming events. <span className="line" />
-          </span>
+          </span>{' '}
           When I was writing my dyploma app, I noticed how beautiful generative
           art can be. I follow this path. I'm ready to work with you on
           commercial projects.

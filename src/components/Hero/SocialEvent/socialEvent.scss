@@ -8,6 +8,17 @@
   border-radius: 12px;
   animation: 0.3s visibility forwards;
   border: 2px solid black;
-  overflow: hidden;
   box-shadow: 0px 0px 52px -20px rgba(0, 0, 0, 1);
+  .poster {
+    width: 9vw;
+    height: 5vw;
+    position: absolute;
+    background-size: contain;
+    top: 0;
+    left: 100%;
+    transform: translate(-90%, -15%);
+    border: 1px solid black;
+    border-radius: 12px;
+    z-index: 3;
+  }
 }

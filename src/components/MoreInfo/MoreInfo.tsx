@@ -4,7 +4,7 @@ import emailjs from '@emailjs/browser';
 import { BasicInfo } from './BasicInfo/BasicInfo';
 import { Form } from './Form/Form';
 
-export const MoreInfo = () => {
+export const MoreInfo = ({ darkMood }: { darkMood: boolean }) => {
   const [pending, setPending] = useState(false);
   const [success, setSuccess] = useState(false);
   const [fail, setFail] = useState(false);
@@ -96,6 +96,7 @@ export const MoreInfo = () => {
             sendEmail={sendEmail}
             validation={validation}
             onChangeInput={onChangeInput}
+            darkMood={darkMood}
           />
           {success && <div className="success">Success, check Your Email!</div>}
           {fail && <div className="fail">please try again</div>}

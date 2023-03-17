@@ -1,11 +1,11 @@
-@mixin googlePlayButton {
+@mixin customMobileButton {
   position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
   letter-spacing: -0.02em;
   font-size: 3.1vw;
-  gap: 3px;
+  gap: 4px;
   text-decoration: none;
   top: calc(20vw + 70%);
   left: 50%;
@@ -17,4 +17,63 @@
   border-radius: 120px;
   text-align: center;
   box-shadow: 0px 12px 64px rgba(27, 27, 27, 0.24);
+}
+
+@mixin customDesktopButton {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: -0.02em;
+  font-size: 1.2vw;
+  gap: 4px;
+  text-decoration: none;
+  top: calc(20vw + 70%);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #353434;
+  color: white;
+  width: 16vw;
+  height: 4vw;
+  border-radius: 120px;
+  text-align: center;
+  box-shadow: 0px 12px 64px rgba(176, 176, 176, 0.397);
+  margin-top: 2vw;
+  strong {
+    background-color: transparent;
+  }
+  svg {
+    background-color: transparent;
+  }
+}
+
+@mixin titileMobile {
+  padding-top: 8px;
+  font-size: 13vw;
+  font-weight: 400;
+  letter-spacing: -0.3vw;
+}
+@mixin titileDesktop {
+  font-size: 8vw;
+  letter-spacing: -0.07vw;
+  font-family: 'ApfelFett';
+  font-weight: 400;
+  text-align: left;
+  padding-top: 0;
+}
+
+@mixin descriptionMobile {
+  padding-top: 4px;
+  font-size: 4.8vw;
+  font-weight: 400;
+  line-height: 4.4vw;
+}
+
+@mixin descriptionDesktop {
+  font-size: 1.2vw;
+  font-weight: 400;
+  max-width: 60%;
+  padding-top: 0;
+  line-height: inherit;
+  text-align: left;
 }

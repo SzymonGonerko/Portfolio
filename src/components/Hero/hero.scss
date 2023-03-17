@@ -8,12 +8,11 @@
   top: 0;
   bottom: 0;
   height: 100vh;
-  background-color: #ffffff;
   font-size: 40px;
   font-family: 'Apfel';
   .circleNav {
     position: absolute;
-    top: 7%;
+    top: 5%;
     left: 0;
     right: 0;
     ul {
@@ -32,6 +31,7 @@
           height: 8vw;
           background-color: #424242;
           color: #424242;
+          box-shadow: 0px 0px 60px 2px rgb(112, 114, 149);
           border-radius: 200px;
           transition: 0.3s;
           border: none;
@@ -40,26 +40,12 @@
             color: #424242;
           }
         }
-        .myself {
-          width: 8vw;
-          height: 8vw;
-          background-color: #424242;
-          border-radius: 200px;
-          transition: 0.3s;
-          &:hover {
-            background-image: url(./myself.jpg);
-            transform: scale(3.5);
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-          }
-        }
       }
     }
   }
   .generalInfo {
     position: absolute;
-    top: 38.5%;
+    top: 40%;
     left: 11%;
     right: 0%;
     h1 {
@@ -105,9 +91,10 @@
     top: 0;
     bottom: 0;
     height: 100vh;
-    background-color: #ffffff;
+    width: 100vw;
     font-size: 40px;
     font-family: 'Apfel';
+
     .circleNav {
       position: absolute;
       top: 10%;
@@ -118,7 +105,7 @@
         justify-content: center;
         flex-direction: row;
         align-items: flex-start;
-        gap: 5vw;
+        gap: 6vw;
         list-style: none;
         li {
           button {
@@ -133,24 +120,14 @@
             border: none;
             font-size: 1.5vw;
             overflow: hidden;
-            &:hover {
+            &:not(.toggle):hover {
               color: white;
               width: 15vw;
             }
           }
-          .myself {
-            width: 2.5vw;
-            height: 2.5vw;
-            background-color: #424242;
-            border-radius: 200px;
-            transition: 0.3s;
-            &:hover {
-              background-image: url(./myself.jpg);
-              transform: scale(3.5);
-              background-position: center;
-              background-repeat: no-repeat;
-              background-size: cover;
-            }
+          .toggle:hover {
+            color: white;
+            width: 5vw;
           }
         }
       }
@@ -176,7 +153,7 @@
           font-size: 3vw;
           font-weight: 800;
           font-size: 4.5vw;
-          letter-spacing: -0.28vw;
+          letter-spacing: -0.3vw;
           font-family: 'ApfelFett';
           text-transform: uppercase;
         }

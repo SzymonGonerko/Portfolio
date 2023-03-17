@@ -1,10 +1,7 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef } from 'react';
 import './socialEvent.scss';
 import src from '../../../assets/MeetUp.mp4';
-
-interface props {
-  videoEl: any;
-}
+import poster from '../../../assets/poster.jpg';
 
 export const SocialEvent = () => {
   const videoEl = useRef<HTMLVideoElement>(null);
@@ -16,8 +13,9 @@ export const SocialEvent = () => {
           src={src}
           ref={videoEl}
           autoPlay={true}
-          style={{ height: '100%' }}
+          style={{ height: '100%', borderRadius: '10px' }}
         />
+        <img src={poster} alt="codingMeetingEvent" className="poster" />
       </div>
     </>
   );

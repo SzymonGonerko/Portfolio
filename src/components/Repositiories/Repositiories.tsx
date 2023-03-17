@@ -109,7 +109,7 @@ export const Repositories = ({ windowWidth }: props) => {
       <div className="repoInfo">
         <header>
           <h1>Repositories</h1>
-          <h2>
+          <h2 className="short">
             Experimental projects using different technologies and environments.
             Two of them were recruiment game for companies from Poznań and Łódź.
           </h2>

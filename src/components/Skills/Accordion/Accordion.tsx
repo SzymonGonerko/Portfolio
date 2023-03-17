@@ -3,7 +3,7 @@ import './accordion.scss';
 import { IoIosArrowDropdown } from 'react-icons/io';
 
 interface props {
-  list: { title: string; subNav: string[] }[];
+  list: { title: string; classNames: any; subNav: string[] }[];
 }
 
 export const Accordion = ({ list }: props) => {
@@ -16,38 +16,41 @@ export const Accordion = ({ list }: props) => {
     const [...newArr] = detailsSkills;
 
     const eachOther = newArr.filter(
-      (element) => !element.classList.contains(skill)
+      (element) => !element.classList.contains(skill[0])
     );
+    console.log(eachOther);
     const spans = eachOther.map((el) => el.querySelectorAll('.arrow')[0]);
     spans.forEach((el) => el.classList.remove('turnRound'));
     eachOther.forEach((el) => el.classList.remove('growLi'));
 
-    const clickedItem = newArr.filter((element) =>
-      element.classList.contains(skill)
+    const clickedItem = newArr.filter(
+      (element) =>
+        element.classList.contains(skill[0]) ||
+        element.classList.contains(skill[1])
     )[0];
-    clickedItem.querySelectorAll('.arrow')[0].classList.toggle('turnRound');
-    clickedItem.classList.toggle('growLi');
-
-    skillsInfo?.addEventListener('click', () => {
-      clickedItem.querySelectorAll('.arrow')[0].classList.remove('turnRound');
-      spans.forEach((el) => el.classList.remove('turnRound'));
-      eachOther.forEach((el) => el.classList.remove('growLi'));
-      clickedItem.classList.remove('growLi');
-    });
+    console.log(clickedItem);
+    clickedItem.querySelectorAll('.arrow')[0].classList.add('turnRound');
+    setTimeout(() => {
+      clickedItem.classList.add('growLi');
+    }, 550);
   };
 
   return (
     <nav className="mainSkillsNav">
       <ul className="mainSkillsList">
-        {list.map((el: { title: string; subNav: any[] }, i: number) => (
+        {list.map((el: any, i: number) => (
           <li
             key={i}
-            onClick={() => handleClick(el.title)}
-            className={`generalSkillLi ${el.title}`}
+            onClick={() => handleClick(el.classNames)}
+            className={`generalSkillLi ${[...el.classNames].join(' ')}`}
           >
             <p className="title">
-              {el.title === 'OtherTools' ? 'Other tools' : el.title}{' '}
-              <span className="arrow">
+              {el.title}
+              <span
+                className={`arrow ${
+                  el.title === 'Technologies' ? 'turnRound' : ''
+                }`}
+              >
                 <IoIosArrowDropdown />
               </span>
             </p>

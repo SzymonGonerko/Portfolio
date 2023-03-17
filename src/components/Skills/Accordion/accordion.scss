@@ -8,7 +8,7 @@
     .generalSkillLi {
       position: relative;
       max-height: 8.2vw;
-      transition: 0.3s;
+      transition: 0.5s;
       font-size: 7vw;
       line-height: 8vw;
       overflow: hidden;
@@ -16,15 +16,16 @@
       p {
         width: 100%;
         position: relative;
+
         span {
           position: absolute;
           display: flex;
           justify-content: center;
           align-items: center;
           top: 15%;
+          transition: 0.3s;
           right: 3%;
           font-size: 5vw;
-          transition: 0.3s;
         }
         .turnRound {
           transform: rotate(180deg);
@@ -57,6 +58,7 @@
 @media (min-width: 600px) {
   .mainSkillsNav {
     .mainSkillsList {
+      justify-content: center;
       .generalSkillLi {
         max-height: 3.5vw;
         font-size: 2.5vw;
@@ -80,7 +82,7 @@
         }
       }
       .growLi {
-        max-height: 70%;
+        max-height: 100%;
       }
     }
   }

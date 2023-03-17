@@ -4,7 +4,8 @@ import { Accordion } from './Accordion/Accordion';
 
 const list = [
   {
-    title: 'Techonologies',
+    title: 'Technologies',
+    classNames: ['technologies', 'growLi'],
     subNav: [
       'HTML5',
       'CSS3',
@@ -17,7 +18,8 @@ const list = [
     ],
   },
   {
-    title: 'OtherTools',
+    title: 'Other Tools',
+    classNames: ['otherTools'],
     subNav: [
       'Styled-Components',
       'Material-UI',
@@ -34,10 +36,12 @@ const list = [
   },
   {
     title: 'Methodologies',
+    classNames: ['methodologies'],
     subNav: ['OOP', 'Procedural programming', 'Agile', 'Scrum'],
   },
   {
     title: 'IDE',
+    classNames: ['ide'],
     subNav: ['WebStorm', 'Visual Studio Code', 'Gulp', 'WebPack', 'CMS'],
   },
 ];
@@ -51,7 +55,7 @@ export const Skills = () => {
       <div className="skillsInfo">
         <header>
           <h1>Skillsset</h1>
-          <h2>I'm good at it&nbsp;...</h2>
+          <h2 className="short">I'm good at it&nbsp;...</h2>
         </header>
       </div>
     </section>
