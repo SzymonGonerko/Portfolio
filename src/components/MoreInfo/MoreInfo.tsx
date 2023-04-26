@@ -25,15 +25,22 @@ export const MoreInfo = ({ darkMood }: { darkMood: boolean }) => {
   };
 
   const handleFocus = (): void => {
-    if (window.innerWidth < 600) setbasicInfoVisibility(false);
+    if (window.innerWidth < 600) {
+      setbasicInfoVisibility(false);
+      const ggg = document.querySelector('.moreInfo') as any;
+      ggg.style.height = '250vh';
+      console.log(ggg);
+    }
   };
 
   const validation = (e: BaseSyntheticEvent) => {
     if (window.innerWidth < 600) {
       setbasicInfoVisibility(true);
+      const ggg = document.querySelector('.moreInfo') as any;
+      ggg.style.height = '100vh';
       setTimeout(() => {
-        window.scrollTo({ top: window.innerHeight * 5, behavior: 'auto' });
-      }, 40);
+        window.scrollTo({ top: window.innerHeight * 4, behavior: 'smooth' });
+      }, 35);
     }
     if ([...e.target.value].length < 3) {
       setForm((prev) => ({
@@ -85,7 +92,8 @@ export const MoreInfo = ({ darkMood }: { darkMood: boolean }) => {
   return (
     <>
       <section className="moreInfo link">
-        {basicInfoVisibility && <BasicInfo />}
+        {/* {basicInfoVisibility && <BasicInfo />} */}
+        <BasicInfo />
         <div className="formContainer">
           <Form
             success={success}

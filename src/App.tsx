@@ -9,13 +9,14 @@ import { CurrentProject } from './components/CurrentProject/CurrentProject';
 import { Repositories } from './components/Repositiories/Repositiories';
 import { Skills } from './components/Skills/Skills';
 import { MoreInfo } from './components/MoreInfo/MoreInfo';
+import { Footer } from './components/Footer/Footer';
 
 const AnimatedCursor = require('react-animated-cursor');
 
 const App = () => {
   const [smoothScrollBar] = useGlobalState('smoothScrollBar');
   const [darkmood, setDarkMood] = useState(false);
-  const myapp = useRef() as any
+  const myapp = useRef() as any;
   const [windowSize, setWindowSize] = useState<number[]>([
     window.innerWidth,
     window.innerHeight,
@@ -27,6 +28,8 @@ const App = () => {
         innerSize={10}
         outerSize={7}
         color={darkmood ? '255, 255, 255' : '0, 0, 0'}
+        // innerStyle={{background: (darkmood ? "red" : "vliolet")}}
+        // outerStyle={{background: (darkmood ?"green" : "yellow")}}
         outerAlpha={0.2}
         trailingSpeed={1}
         innerScale={0.4}
@@ -35,7 +38,6 @@ const App = () => {
           'a',
           'button',
           'p.title',
-          'span.event',
           'input',
           'textarea',
           'div.MuiInputBase-root',
@@ -47,17 +49,19 @@ const App = () => {
         <Repositories windowWidth={windowSize[0]} />
         <Skills />
         <MoreInfo darkMood={darkmood} />
+        <Footer />
       </ScrollContainer>
     </>
   );
 
   const mobileLayout = (
     <>
-      <Hero darkmood={darkmood} setDarkMood={setDarkMood}  />
+      <Hero darkmood={darkmood} setDarkMood={setDarkMood} />
       <CurrentProject />
       <Repositories windowWidth={windowSize[0]} />
       <Skills />
       <MoreInfo darkMood={darkmood} />
+      <Footer />
     </>
   );
 
@@ -65,23 +69,22 @@ const App = () => {
     setWindowSize([window.innerWidth, window.innerHeight]);
   };
 
-  const changeColor = (color : string) => {
+  const changeColor = (color: string) => {
     if (color === `"dark"`) {
-      const app = document.querySelector(".App")
-      app?.classList.add("darkmood")
-      setDarkMood(true)
+      const app = document.querySelector('.App');
+      app?.classList.add('darkmood');
+      setDarkMood(true);
     } else {
-      setDarkMood(false)
+      setDarkMood(false);
     }
-  }
+  };
 
   useEffect(() => {
     window.addEventListener('resize', handleWindowResize);
     setTimeout(() => {
-      let colorScheme = getComputedStyle(document.body,':after').content;
-      console.log(colorScheme)
-      changeColor(colorScheme)
-    }, 1000)
+      let colorScheme = getComputedStyle(document.body, ':after').content;
+      changeColor(colorScheme);
+    }, 1000);
     return () => {
       window.removeEventListener('resize', handleWindowResize);
     };
@@ -96,7 +99,7 @@ const App = () => {
   };
 
   return (
-    <main ref={myapp} className={`App ${darkmood? "darkmood": ''}`}>
+    <main ref={myapp} className={`App ${darkmood ? 'darkmood' : ''}`}>
       {windowSize[0] > 600 ? desktopLayout : mobileLayout}
       <div id="topArrow" onClick={scrollToTop}>
         <FaChevronUp />

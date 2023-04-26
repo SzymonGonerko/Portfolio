@@ -7,8 +7,12 @@ import React, {
 import SendIcon from '@mui/icons-material/Send';
 import CheckIcon from '@mui/icons-material/Check';
 import Box from '@mui/material/Box';
-import { CustomLightMaterialButton, CustomLightMaterialElement, CustomDarkMaterialElement, CustomDarkMaterialButton } from './formStyles';
-
+import {
+  CustomLightMaterialButton,
+  CustomLightMaterialElement,
+  CustomDarkMaterialElement,
+  CustomDarkMaterialButton,
+} from './formStyles';
 
 interface form {
   name: {
@@ -43,7 +47,7 @@ export const Form = (p: props) => {
   );
   const [CustomThemeButton, setCustomThemeButton] = useState(
     () => CustomLightMaterialButton
-  )
+  );
   const defaultPropsInput = {
     onBlur: (e: React.FocusEvent<HTMLInputElement>) => p.validation(e),
     onChange: (e: React.ChangeEvent<HTMLInputElement>) => p.onChangeInput(e),

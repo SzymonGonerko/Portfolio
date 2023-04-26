@@ -16,6 +16,9 @@ const photos = [
   require('../../assets/plantifiPreview/9.jpg'),
   require('../../assets/plantifiPreview/10.jpg'),
   require('../../assets/plantifiPreview/11.jpg'),
+  require('../../assets/plantifiPreview/12.jpg'),
+  require('../../assets/plantifiPreview/13.jpg'),
+  require('../../assets/plantifiPreview/14.jpg'),
 ];
 
 export const CurrentProject = () => {

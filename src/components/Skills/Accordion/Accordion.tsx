@@ -11,14 +11,11 @@ export const Accordion = ({ list }: props) => {
     const detailsSkills = document.querySelectorAll(
       '.generalSkillLi'
     ) as unknown as HTMLCollection;
-    const skillsInfo = document.querySelector('.skillsInfo');
-
     const [...newArr] = detailsSkills;
 
     const eachOther = newArr.filter(
       (element) => !element.classList.contains(skill[0])
     );
-    console.log(eachOther);
     const spans = eachOther.map((el) => el.querySelectorAll('.arrow')[0]);
     spans.forEach((el) => el.classList.remove('turnRound'));
     eachOther.forEach((el) => el.classList.remove('growLi'));
@@ -28,7 +25,6 @@ export const Accordion = ({ list }: props) => {
         element.classList.contains(skill[0]) ||
         element.classList.contains(skill[1])
     )[0];
-    console.log(clickedItem);
     clickedItem.querySelectorAll('.arrow')[0].classList.add('turnRound');
     setTimeout(() => {
       clickedItem.classList.add('growLi');

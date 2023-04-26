@@ -1,5 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './card.scss';
+import Button from '@mui/material/Button';
+import { AiFillGithub } from 'react-icons/ai';
+import { styled } from '@mui/material/styles';
 
 interface props {
   logo: JSX.Element;
@@ -24,16 +27,10 @@ export const Card = ({
       <div className="gradient">{logo}</div>
       <div className="generalInfo">
         <div className="wrapperInfo">
-          <div className="topInfo">
-            <p className="date">{finished}</p>
-            <p className="library">{library}</p>
-          </div>
           <p className="projectTitle">{name}</p>
           <p className="description">{description}</p>
-          <a className="githubLink" href={github}>
-            check on github
-          </a>
         </div>
+        {/* <a href={github} target={"_blank"}>Check on github <AiFillGithub/></a> */}
       </div>
     </div>
   );

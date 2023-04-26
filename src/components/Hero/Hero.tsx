@@ -1,15 +1,14 @@
 import React, { useState, useRef } from 'react';
 import './hero.scss';
 import { useGlobalState } from 'react-nice-scroll';
-import { SocialEvent } from './SocialEvent/SocialEvent';
-import {MdOutlineLightMode, MdOutlineNightlight} from "react-icons/md"
+import { MdOutlineLightMode, MdOutlineNightlight } from 'react-icons/md';
 
 interface props {
-darkmood: boolean,
-setDarkMood: React.Dispatch<React.SetStateAction<boolean>>
+  darkmood: boolean;
+  setDarkMood: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-export const Hero = ({darkmood, setDarkMood} : props) => {
+export const Hero = ({ darkmood, setDarkMood }: props) => {
   const [smoothScrollBar] = useGlobalState('smoothScrollBar');
   const [showEvent, setShowEvent] = useState(false);
 
@@ -64,8 +63,20 @@ export const Hero = ({darkmood, setDarkMood} : props) => {
             <button onClick={() => scrollTo('moreInfo')}>Contact</button>
           </li>
           <li>
-            <button aria-label='toggle theme website' className='toggle' onClick={() => setDarkMood((p) => !p)}>
-              {darkmood ? <MdOutlineNightlight style={{transform: "translate(0, 0.13vw)"}}/> : <MdOutlineLightMode style={{transform: "translate(0, 0.13vw)"}}/>}
+            <button
+              aria-label="toggle theme website"
+              className="toggle"
+              onClick={() => setDarkMood((p) => !p)}
+            >
+              {!darkmood ? (
+                <MdOutlineNightlight
+                  style={{ transform: 'translate(0, 0.13vw)' }}
+                />
+              ) : (
+                <MdOutlineLightMode
+                  style={{ transform: 'translate(0, 0.13vw)' }}
+                />
+              )}
             </button>
           </li>
         </ul>
@@ -78,21 +89,11 @@ export const Hero = ({darkmood, setDarkMood} : props) => {
           <h3>Based in Wrocław</h3>
         </div>
         <p className="description">
-          I'm graduate of the IT CodersLab school with specialization in React
-          and React Native. On the last project I had pleasure cooperete with 5
-          persons team in sprintlog scrum system. I incessantly participate at{' '}
-          <span
-            className="event"
-            onClick={onHandleClick}
-            onMouseLeave={onMouseLeave}
-          >
-            programming events. <span className="line" />
-          </span>{' '}
-          When I was writing my dyploma app, I noticed how beautiful generative
-          art can be. I follow this path. I'm ready to work with you on
-          commercial projects.
+          I'm a graduate of the IT CodersLab school with specialization in React
+          and React Native. I cooperated with the backend and UX team on Scrum
+          methodology. Incessantly participate at programming events and
+          confferences. My passions is 3D object animations in Three.js
         </p>
-        {showEvent && <SocialEvent />}
       </header>
     </section>
   );

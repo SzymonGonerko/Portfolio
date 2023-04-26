@@ -32,6 +32,7 @@ const list = [
       'Git',
       'Prettier',
       'Eslint',
+      'Rest API'
     ],
   },
   {
@@ -55,7 +56,11 @@ export const Skills = () => {
       <div className="skillsInfo">
         <header>
           <h1>Skillsset</h1>
-          <h2 className="short">I'm good at it&nbsp;...</h2>
+          <h2 className="short">
+            In my line of work, I use different tools depends of project
+            purpose. Graphics 3D objects, live chat, android app, games, data
+            users... and many more.
+          </h2>
         </header>
       </div>
     </section>

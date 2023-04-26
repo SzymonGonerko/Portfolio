@@ -32,15 +32,10 @@
   }
 }
 
-
 .App {
   opacity: 0;
   animation: showApp 0.25s linear 0.25s forwards;
   transition: 0.4s;
-  // * {
-  //   background-color: black;
-  //   color: white !important;
-  // }
   #topArrow {
     position: fixed;
     display: flex;
@@ -68,18 +63,26 @@
   }
 }
 
-
 .darkmood {
   .ns-container {
     background-color: black;
   }
   .scrollbar-track {
-    background: rgba(222, 222, 222, .15);
+    background: rgba(222, 222, 222, 0.15);
   }
   .scrollbar-thumb {
-    background: rgba(222, 222, 222, .95) !important;
+    background: rgba(222, 222, 222, 0.95) !important;
   }
   .hero {
+    .circleNav ul li button {
+      background-color: #424242;
+      color: #424242;
+      &:not(.toggle):hover {
+        color: #424242;
+        width: 15vw;
+        background-color: #cbcbcb;
+      }
+    }
     .generalInfo {
       .description {
         span {
@@ -112,25 +115,47 @@
     }
   }
   .projects {
-    .card {background: #0b0b0b !important;}
+    .card {
+      background: #0b0b0b !important;
+    }
     .githubLink {
       color: #e9e9e994 !important;
     }
     .gradient {
       .vanillaDate {
-        background: linear-gradient(331deg, rgb(65, 115, 151) 0%, rgb(151, 69, 143) 100%);
+        background: linear-gradient(
+          331deg,
+          rgb(65, 115, 151) 0%,
+          rgb(151, 69, 143) 100%
+        );
       }
       .SGWorld {
-        background: linear-gradient(331deg, rgb(82, 137, 73) 0%, rgb(58, 84, 145) 100%);
+        background: linear-gradient(
+          331deg,
+          rgb(82, 137, 73) 0%,
+          rgb(58, 84, 145) 100%
+        );
       }
       .sunsetTypes {
-        background: linear-gradient(331deg, rgb(140, 113, 39) 0%, rgba(140, 52, 80) 100%);
+        background: linear-gradient(
+          331deg,
+          rgb(140, 113, 39) 0%,
+          rgba(140, 52, 80) 100%
+        );
       }
       .flow2Code {
-        background: linear-gradient(331deg, rgb(144, 40, 132) 0%, rgba(96, 148, 91) 100%);
+        background: linear-gradient(
+          331deg,
+          rgb(144, 40, 132) 0%,
+          rgba(96, 148, 91) 100%
+        );
       }
       .optimoDev {
-        background: linear-gradient(331deg, rgb(04, 115, 135) 0%, rgba(35, 143, 87, 0.9) 100%);
+        background: linear-gradient(
+          331deg,
+          rgb(04, 115, 135) 0%,
+          rgba(35, 143, 87, 0.9) 100%
+        );
       }
     }
   }
@@ -141,11 +166,10 @@
     .topInfo {
       color: #e9e9e994;
     }
-  } 
+  }
   background-color: #000000;
   color: white;
 }
-
 
 @media (prefers-color-scheme: dark) {
   body::after {
@@ -154,9 +178,9 @@
   }
 }
 
-@media (prefers-color-scheme: light){
-  body::after{
-      content: 'light';
-      display: none;
+@media (prefers-color-scheme: light) {
+  body::after {
+    content: 'light';
+    display: none;
   }
 }

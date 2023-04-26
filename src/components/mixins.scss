@@ -54,7 +54,7 @@
   letter-spacing: -0.3vw;
 }
 @mixin titileDesktop {
-  font-size: 8vw;
+  font-size: 6vw;
   letter-spacing: -0.07vw;
   font-family: 'ApfelFett';
   font-weight: 400;
@@ -73,7 +73,7 @@
   font-size: 1.2vw;
   font-weight: 400;
   max-width: 60%;
-  padding-top: 0;
+  padding-top: 1vw;
   line-height: inherit;
   text-align: left;
 }

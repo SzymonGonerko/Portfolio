@@ -4,12 +4,11 @@
   height: 100vh;
   width: 100vw;
   font-size: 40px;
-  text-align: center;
   font-family: 'Apfel', sans-serif;
   overflow: hidden;
 
   .formContainer {
-    height: 65%;
+    height: 80%;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -25,7 +24,7 @@
       color: green;
       width: 90%;
       text-align: left;
-      padding-top: 0.3vw;
+      padding-top: 0.6vw;
       margin-left: 1vw;
     }
     .fail {
@@ -33,7 +32,7 @@
       color: red;
       width: 90%;
       text-align: left;
-      padding-top: 0.3vw;
+      padding-top: 0.6vw;
       margin-left: 1vw;
     }
   }
@@ -52,7 +51,7 @@
     font-family: 'Apfel', sans-serif;
     .formContainer {
       height: 100vh;
-      width: 50%;
+      width: 100%;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -66,10 +65,12 @@
       .success {
         font-size: 1vw;
         width: 70%;
+        padding-top: 0.3vw;
       }
       .fail {
         font-size: 1vw;
         width: 70%;
+        padding-top: 0.3vw;
       }
     }
   }

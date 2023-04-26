@@ -34,7 +34,7 @@ const repositories = [
     library: 'TypeScript/Redux',
     logo: <SunsetTypes live={'https://sunsettypes.netlify.app'} />,
     github: 'https://github.com/SzymonGonerko/Sunset-Types',
-    description: `An experimental app includes the todolist and calculator on 3D space. Compontnts are placed in sunset scenery.`,
+    description: `An experimental app includes the todolist and calculator on 3D space. Components were placed in sunset scenery.`,
   },
   {
     name: 'Flow2CodeGame',

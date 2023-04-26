@@ -17,7 +17,7 @@
     height: 30%;
     header {
       font-family: 'Apfel';
-      padding: 0 10vh;
+      padding: 8px 8px 0 8px;
       h1 {
         @include titileMobile;
       }
@@ -38,7 +38,7 @@
       justify-content: space-around;
       width: 500vw;
       height: 100%;
-      align-items: center;
+      align-items: flex-start;
     }
   }
 }

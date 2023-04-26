@@ -7,7 +7,7 @@ import {
   ThemeProvider,
 } from '@mui/material/styles';
 
- const inputStyle = {
+const inputStyle = {
   '&': {
     marginBottom: window.innerWidth > 600 ? '2vw' : '4vw',
     width: '100%',
@@ -41,7 +41,7 @@ import {
   },
 };
 
- const inputDarkStyle = {
+const inputDarkStyle = {
   '&': {
     marginBottom: window.innerWidth > 600 ? '2vw' : '4vw',
     width: '100%',
@@ -77,7 +77,7 @@ import {
       borderColor: 'white',
     },
     '&.Mui-focused fieldset': {
-      border: "2px solid white",
+      border: '2px solid white',
       // borderColor: 'white',
       // boxShadow: "0px 0px 4px 2px rgb(112, 114, 149)"
     },
@@ -92,7 +92,7 @@ import {
   },
 };
 
- const buttonLightStyles = {
+const buttonLightStyles = {
   textTransform: 'none',
   fontSize: window.innerWidth > 600 ? '2vw' : '5vw',
   border: '2px solid',
@@ -118,7 +118,7 @@ import {
   },
 };
 
- const buttonDarkStyles = {
+const buttonDarkStyles = {
   textTransform: 'none',
   fontSize: window.innerWidth > 600 ? '2vw' : '5vw',
   border: '0px solid',
@@ -128,7 +128,7 @@ import {
   backgroundColor: '#131313',
   fontFamily: ['Apfel'],
   '&:hover': {
-    boxShadow: "0px 0px 4px 3px rgb(112, 114, 149)",
+    boxShadow: '0px 0px 4px 3px rgb(112, 114, 149)',
     border: '0px solid',
   },
   '&:active': {
@@ -146,7 +146,11 @@ import {
 // -------------------------------------------------------------------
 
 export const CustomLightMaterialElement = styled(TextField)(inputStyle);
-export const CustomLightMaterialButton = styled(LoadingButton)(buttonLightStyles as any);
+export const CustomLightMaterialButton = styled(LoadingButton)(
+  buttonLightStyles as any
+);
 
 export const CustomDarkMaterialElement = styled(TextField)(inputDarkStyle);
-export const CustomDarkMaterialButton = styled(LoadingButton)(buttonDarkStyles as any);
+export const CustomDarkMaterialButton = styled(LoadingButton)(
+  buttonDarkStyles as any
+);
