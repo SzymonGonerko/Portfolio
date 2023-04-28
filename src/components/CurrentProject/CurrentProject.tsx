@@ -68,7 +68,7 @@ export const CurrentProject = () => {
               Published on Google Play.
             </h2>
             <a className="googlePlayLink" target={'_blank'} href={googleplay}>
-              Check it on <strong>GooglePlay</strong>
+              Download by <strong>GooglePlay</strong>
               <FaGooglePlay />
             </a>
           </header>

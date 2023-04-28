@@ -21,7 +21,6 @@
 @media (min-width: 600px) {
   .basicInfo {
     height: 100vh;
-    // width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -37,20 +36,7 @@
       }
       h2 {
         @include descriptionDesktop;
-      }
-    }
-    .events {
-      display: flex;
-      justify-content: space-between;
-      flex-direction: column;
-      height: 20%;
-      width: 100%;
-      h3 {
-        font-size: 1.8vw;
-        letter-spacing: -0.07vw;
-        font-family: 'Apfel';
-        font-weight: 400;
-        text-align: left;
+        padding-top: 0;
       }
     }
   }

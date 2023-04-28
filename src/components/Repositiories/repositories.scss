@@ -51,7 +51,7 @@
     text-align: center;
     font-family: 'Apfel', sans-serif;
     .repoInfo {
-      width: 60%;
+      width: 50%;
       height: 100%;
       justify-content: center;
       align-items: center;
@@ -68,6 +68,7 @@
         }
         .short {
           @include descriptionDesktop;
+          transform: translate(0, -10%);
         }
         .githubLink {
           @include customDesktopButton;
@@ -83,7 +84,7 @@
       }
     }
     .projects {
-      width: 40%;
+      width: 50%;
       height: 100%;
       overflow-x: auto;
       .wrapper {

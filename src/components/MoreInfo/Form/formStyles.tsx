@@ -121,7 +121,7 @@ const buttonLightStyles = {
 const buttonDarkStyles = {
   textTransform: 'none',
   fontSize: window.innerWidth > 600 ? '2vw' : '5vw',
-  border: '0px solid',
+  border: '1px solid white',
   width: '50%',
   color: 'white !important',
   borderRadius: '30px',
@@ -129,7 +129,7 @@ const buttonDarkStyles = {
   fontFamily: ['Apfel'],
   '&:hover': {
     boxShadow: '0px 0px 4px 3px rgb(112, 114, 149)',
-    border: '0px solid',
+    border: '1px solid white',
   },
   '&:active': {
     fontSize: window.innerWidth > 600 ? '2vw' : '5vw',

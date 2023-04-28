@@ -2,6 +2,7 @@ import React, { useState, useRef } from 'react';
 import './hero.scss';
 import { useGlobalState } from 'react-nice-scroll';
 import { MdOutlineLightMode, MdOutlineNightlight } from 'react-icons/md';
+import { SocialEvent } from './SocialEvent/SocialEvent';
 
 interface props {
   darkmood: boolean;
@@ -32,7 +33,6 @@ export const Hero = ({ darkmood, setDarkMood }: props) => {
       '.description span .line'
     ) as unknown as HTMLElement;
     line.style.width = '213%';
-    line.style.height = '2px';
   };
 
   const onMouseLeave = () => {
@@ -40,7 +40,6 @@ export const Hero = ({ darkmood, setDarkMood }: props) => {
       '.description span .line'
     ) as unknown as HTMLElement;
     line.style.width = '100%';
-    line.style.height = '1px';
     setShowEvent(false);
   };
 
@@ -84,16 +83,22 @@ export const Hero = ({ darkmood, setDarkMood }: props) => {
 
       <header className="generalInfo">
         <h1>Szymon Gonerko</h1>
-        <div className="info">
-          <h2>Frontend Developer</h2>
-          <h3>Based in Wrocław</h3>
-        </div>
+        <h2>Frontend Developer based in Wrocław</h2>
         <p className="description">
           I'm a graduate of the IT CodersLab school with specialization in React
           and React Native. I cooperated with the backend and UX team on Scrum
-          methodology. Incessantly participate at programming events and
-          confferences. My passions is 3D object animations in Three.js
+          methodology. Incessantly participate at{' '}
+          <span
+            className="event"
+            onClick={onHandleClick}
+            onMouseLeave={onMouseLeave}
+          >
+            programming events. <span className="line" />
+          </span>{' '}
+          <br /> and confferences. My passions is 3D object animations in
+          Three.js
         </p>
+        {showEvent && <SocialEvent />}
       </header>
     </section>
   );

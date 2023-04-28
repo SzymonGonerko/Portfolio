@@ -7,6 +7,7 @@ export const Footer = () => {
     <>
       <footer>
         <p>Webside created by Szymon Gonerko</p>
+        <p>Follow me on socials:</p>
         <div className="socialWrapper">
           <a
             target={'_blank'}
