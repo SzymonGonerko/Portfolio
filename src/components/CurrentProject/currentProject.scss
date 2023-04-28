@@ -26,7 +26,6 @@
       }
     }
     .container {
-      // background-color: #f3f3f3;
       position: relative;
       flex-grow: 1;
       margin: 8px;
@@ -70,7 +69,6 @@
           margin: 64px;
           justify-content: center;
           align-items: center;
-
           img {
             display: block;
             width: 213px;
@@ -93,7 +91,7 @@
         width: 50%;
         header {
           display: flex;
-          position: relative;
+          // position: relative;
           flex-direction: column;
           width: 100%;
           padding: 4.5vw 4vw 0 4vw;
@@ -102,6 +100,7 @@
           }
           .short {
             @include descriptionDesktop;
+            transform: translate(0, -20%);
           }
           .googlePlayLink {
             @include customDesktopButton;

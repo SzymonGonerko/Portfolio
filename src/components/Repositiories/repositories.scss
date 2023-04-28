@@ -68,6 +68,7 @@
         }
         .short {
           @include descriptionDesktop;
+          transform: translate(0, -10%);
         }
         .githubLink {
           @include customDesktopButton;

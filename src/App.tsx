@@ -28,8 +28,6 @@ const App = () => {
         innerSize={10}
         outerSize={7}
         color={darkmood ? '255, 255, 255' : '0, 0, 0'}
-        // innerStyle={{background: (darkmood ? "red" : "vliolet")}}
-        // outerStyle={{background: (darkmood ?"green" : "yellow")}}
         outerAlpha={0.2}
         trailingSpeed={1}
         innerScale={0.4}
@@ -38,6 +36,7 @@ const App = () => {
           'a',
           'button',
           'p.title',
+          'span.event',
           'input',
           'textarea',
           'div.MuiInputBase-root',

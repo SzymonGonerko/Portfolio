@@ -10,6 +10,10 @@
   .gradient {
     height: 190px;
     width: 100%;
+    background: #1f213a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 12px;
     overflow: hidden;
     border: 1px solid black;
@@ -46,6 +50,10 @@
     border-radius: 24px;
     height: auto;
     .gradient {
+      background: #1f213a;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       height: 260px;
       width: 100%;
       border: 1px solid black;

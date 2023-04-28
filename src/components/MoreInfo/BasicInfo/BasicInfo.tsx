@@ -7,7 +7,8 @@ export const BasicInfo = () => {
       <header>
         <h1>Hit me up!</h1>
         <h2 className="short">
-          If You have questions for me, let me know about it !
+          Don't be shy! if I can do something for you let me know about it !
+          First of all, send me a simple message...
         </h2>
       </header>
     </div>

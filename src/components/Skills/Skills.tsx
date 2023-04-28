@@ -32,7 +32,7 @@ const list = [
       'Git',
       'Prettier',
       'Eslint',
-      'Rest API'
+      'Rest API',
     ],
   },
   {

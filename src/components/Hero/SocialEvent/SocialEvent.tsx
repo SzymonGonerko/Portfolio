@@ -15,6 +15,7 @@ export const SocialEvent = () => {
           autoPlay={true}
           style={{ height: '100%', borderRadius: '10px' }}
         />
+        <div className="cover" />
         <img src={poster} alt="codingMeetingEvent" className="poster" />
       </div>
     </>
