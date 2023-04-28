@@ -42,7 +42,7 @@ const App = () => {
           'div.MuiInputBase-root',
         ]}
       />
-      <ScrollContainer damping={0.07} thumbMinSize={10}>
+      <ScrollContainer damping={0.06} thumbMinSize={10}>
         <Hero darkmood={darkmood} setDarkMood={setDarkMood} />
         <CurrentProject />
         <Repositories windowWidth={windowSize[0]} />
