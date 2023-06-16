@@ -69,6 +69,9 @@
           margin: 64px;
           justify-content: center;
           align-items: center;
+          .tilt:not(:hover) {
+            transition: 1s;
+          }
           img {
             display: block;
             width: 213px;

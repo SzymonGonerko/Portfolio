@@ -64,10 +64,10 @@
         left: 0;
         height: 100%;
         width: 100%;
-        filter: blur(30px) brightness(0.7);
+        filter: blur(50px) brightness(0.7);
         background-position: center;
         background-size: cover;
-        transition: 0.3s;
+        transition: 0.5s;
       }
       &:hover {
         .graphics {

@@ -3,6 +3,15 @@ import './currentProject.scss';
 import { FaGooglePlay } from 'react-icons/fa';
 import { ScrollContainer } from 'react-nice-scroll';
 import logo from '../../assets/plantifiMobile.png';
+import { Tilt } from 'react-tilt'
+
+
+const defaultOptions = {
+	reverse: false,
+	max: 20,
+	perspective: 1500,
+	scale: 1,
+}
 
 const photos = [
   require('../../assets/plantifiPreview/1.jpg'),
@@ -54,7 +63,9 @@ export const CurrentProject = () => {
           >
             {photos.map((el, i) => (
               <div className="containerImg" key={i}>
-                <img alt={`preview-plantifi-${i + 1}`} src={el}></img>
+                <Tilt className="tilt" options={defaultOptions}>
+                  <img alt={`preview-plantifi-${i + 1}`} src={el}></img>
+                </Tilt>
               </div>
             ))}
           </ScrollContainer>
