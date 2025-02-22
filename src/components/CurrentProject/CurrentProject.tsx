@@ -3,15 +3,14 @@ import './currentProject.scss';
 import { FaGooglePlay } from 'react-icons/fa';
 import { ScrollContainer } from 'react-nice-scroll';
 import logo from '../../assets/plantifiMobile.png';
-import { Tilt } from 'react-tilt'
-
+import { Tilt } from 'react-tilt';
 
 const defaultOptions = {
-	reverse: false,
-	max: 20,
-	perspective: 1500,
-	scale: 1,
-}
+  reverse: false,
+  max: 20,
+  perspective: 1500,
+  scale: 1,
+};
 
 const photos = [
   require('../../assets/plantifiPreview/1.jpg'),
@@ -42,8 +41,8 @@ export const CurrentProject = () => {
           <h1>Currently working on Plantifi</h1>
           <h2 className="short">
             Mobile app for manage and recognizing home plants. Created by 5 UX
-            coworkers on Figma. Based on React Native and Expo enivoroment.
-            Published on Google Play.
+            coworkers on Figma. Based on React Native and Expo roment. Published
+            on Google Play.
           </h2>
         </header>
         <div className="container">
@@ -75,7 +74,7 @@ export const CurrentProject = () => {
             <h1>Currently working on Plantifi</h1>
             <h2 className="short">
               Mobile app for manage and recognizing home plants. Created by 5 UX
-              coworkers on Figma. Based on React Native and Expo enivoroment.
+              coworkers on Figma. Based on React Native and Expo environment.
               Published on Google Play.
             </h2>
             <a className="googlePlayLink" target={'_blank'} href={googleplay}>

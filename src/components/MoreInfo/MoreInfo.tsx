@@ -8,7 +8,6 @@ export const MoreInfo = ({ darkMood }: { darkMood: boolean }) => {
   const [pending, setPending] = useState(false);
   const [success, setSuccess] = useState(false);
   const [fail, setFail] = useState(false);
-  const [basicInfoVisibility, setbasicInfoVisibility] = useState(true);
   const myForm = useRef();
   const [form, setForm] = useState({
     name: { content: '', err: false },
@@ -26,7 +25,6 @@ export const MoreInfo = ({ darkMood }: { darkMood: boolean }) => {
 
   const handleFocus = (): void => {
     if (window.innerWidth < 600) {
-      setbasicInfoVisibility(false);
       const ggg = document.querySelector('.moreInfo') as any;
       ggg.style.height = '250vh';
       console.log(ggg);
@@ -35,7 +33,6 @@ export const MoreInfo = ({ darkMood }: { darkMood: boolean }) => {
 
   const validation = (e: BaseSyntheticEvent) => {
     if (window.innerWidth < 600) {
-      setbasicInfoVisibility(true);
       const ggg = document.querySelector('.moreInfo') as any;
       ggg.style.height = '100vh';
       setTimeout(() => {
@@ -71,7 +68,7 @@ export const MoreInfo = ({ darkMood }: { darkMood: boolean }) => {
           process.env.REACT_APP_EMAILJS_SERVICE_ID as unknown as string,
           process.env.REACT_APP_EMAILJS_TEMPLATE_ID as unknown as string,
           myForm.current as unknown as HTMLFormElement,
-          'DiWkYrzcC-lisqd-p'
+          process.env.REACT_APP_EMAILJS_PUBLIC_KEY
         )
         .then(
           (result) => {

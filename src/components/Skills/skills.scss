@@ -39,6 +39,7 @@
 @media (min-width: 600px) {
   .skills {
     flex-direction: row-reverse;
+    border: 2px solid black;
     .skillsSetup {
       width: 50%;
       height: 100%;

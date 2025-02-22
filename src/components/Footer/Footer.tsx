@@ -6,7 +6,7 @@ export const Footer = () => {
   return (
     <>
       <footer>
-        <p>Webside created by Szymon Gonerko</p>
+        <p>Webside created by Szymon Gonerko (2023 - 2025)</p>
         <p>Follow me on socials:</p>
         <div className="socialWrapper">
           <a

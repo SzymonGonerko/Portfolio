@@ -12,15 +12,18 @@ const list = [
       'SCSS',
       'JavaScript',
       'TypeScript',
-      'React',
-      'React Native',
-      'Redux',
+      'Python',
+      'C#',
     ],
   },
   {
     title: 'Other Tools',
     classNames: ['otherTools'],
     subNav: [
+      'React',
+      'React Native',
+      'Redux',
+      '.NET',
       'Styled-Components',
       'Material-UI',
       'JSS',
@@ -43,7 +46,16 @@ const list = [
   {
     title: 'IDE',
     classNames: ['ide'],
-    subNav: ['WebStorm', 'Visual Studio Code', 'Gulp', 'WebPack', 'CMS'],
+    subNav: [
+      'WebStorm',
+      'Visual Studio Code',
+      'Visal Studio',
+      'Gulp',
+      'WebPack',
+      'CMS',
+      'Linux',
+      'Windows',
+    ],
   },
 ];
 

@@ -32,7 +32,7 @@ export const Hero = ({ darkmood, setDarkMood }: props) => {
     const line = document.querySelector(
       '.description span .line'
     ) as unknown as HTMLElement;
-    line.style.width = '213%';
+    line.style.width = '171%';
   };
 
   const onMouseLeave = () => {
@@ -82,23 +82,27 @@ export const Hero = ({ darkmood, setDarkMood }: props) => {
       </nav>
 
       <header className="generalInfo">
-        <h1>Szymon Gonerko</h1>
-        <h2>Frontend Developer based in Wrocław</h2>
-        <p className="description">
-          I'm a graduate of the IT CodersLab school with specialization in React
-          and React Native. I cooperated with the backend and UX team on Scrum
-          methodology. Incessantly participate at{' '}
-          <span
-            className="event"
-            onClick={onHandleClick}
-            onMouseLeave={onMouseLeave}
-          >
-            programming events. <span className="line" />
-          </span>{' '}
-          <br /> and confferences. My passions is 3D object animations in
-          Three.js
-        </p>
+        <div className="photo" />
+        <div className="wrapper">
+          <h1>Szymon Gonerko</h1>
+          <h2>Engineer Developer based in Wrocław</h2>
+          <p className="description">
+            I'm a graduate of the IT CodersLab school with specialization in
+            React and React Native. Since 2024 student IT engineer. Cooperated
+            with the backend and UX team on Scrum methodology. Incessantly
+            participate at{' '}
+            <span
+              className="event"
+              onClick={onHandleClick}
+              onMouseLeave={onMouseLeave}
+            >
+              programming events <span className="line" />
+            </span>{' '}
+            and confferences. Fascinating on 3D object animations.
+          </p>
+        </div>
         {showEvent && <SocialEvent />}
+        <div className="sign" />
       </header>
     </section>
   );
