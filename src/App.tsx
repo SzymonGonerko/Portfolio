@@ -5,7 +5,7 @@ import 'react-nice-scroll/dist/styles.css';
 import { FaChevronUp } from 'react-icons/fa';
 
 import { Hero } from '../src/components/Hero/Hero';
-import { CurrentProject } from './components/CurrentProject/CurrentProject';
+import { Plantify } from './components/Plantify/Plantify';
 import { Repositories } from './components/Repositiories/Repositiories';
 import { Skills } from './components/Skills/Skills';
 import { MoreInfo } from './components/MoreInfo/MoreInfo';
@@ -44,7 +44,7 @@ const App = () => {
       />
       <ScrollContainer damping={0.06} thumbMinSize={10}>
         <Hero darkmood={darkmood} setDarkMood={setDarkMood} />
-        <CurrentProject />
+        <Plantify />
         <Repositories windowWidth={windowSize[0]} />
         <Skills />
         <MoreInfo darkMood={darkmood} />
@@ -56,7 +56,7 @@ const App = () => {
   const mobileLayout = (
     <>
       <Hero darkmood={darkmood} setDarkMood={setDarkMood} />
-      <CurrentProject />
+      <Plantify />
       <Repositories windowWidth={windowSize[0]} />
       <Skills />
       <MoreInfo darkMood={darkmood} />

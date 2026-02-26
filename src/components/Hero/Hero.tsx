@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import './hero.scss';
 import { useGlobalState } from 'react-nice-scroll';
 import { MdOutlineLightMode, MdOutlineNightlight } from 'react-icons/md';
@@ -32,7 +32,7 @@ export const Hero = ({ darkmood, setDarkMood }: props) => {
     const line = document.querySelector(
       '.description span .line'
     ) as unknown as HTMLElement;
-    line.style.width = '171%';
+    line.style.width = '245%';
   };
 
   const onMouseLeave = () => {
@@ -48,8 +48,8 @@ export const Hero = ({ darkmood, setDarkMood }: props) => {
       <nav className="circleNav">
         <ul>
           <li>
-            <button onClick={() => scrollTo('currentProject')}>
-              Current&nbsp;project
+            <button onClick={() => scrollTo('plantify')}>
+              Plantify
             </button>
           </li>
           <li>
@@ -85,12 +85,9 @@ export const Hero = ({ darkmood, setDarkMood }: props) => {
         <div className="photo" />
         <div className="wrapper">
           <h1>Szymon Gonerko</h1>
-          <h2>Engineer Developer based in Wrocław</h2>
+          <h2>Engineer developer & IT specialist</h2>
           <p className="description">
-            I'm a graduate of the IT CodersLab school with specialization in
-            React and React Native. Since 2024 student IT engineer. Cooperated
-            with the backend and UX team on Scrum methodology. Incessantly
-            participate at{' '}
+            Developer and IT specialist focused on React and mobile application development using React Native. Graduate of IT CodersLab. Since 2024, an IT engineering student. Experience working with backend and UX teams in Agile environments. Applies Scrum methodology to deliver high-quality solutions. Regularly participates in{' '}
             <span
               className="event"
               onClick={onHandleClick}
@@ -98,7 +95,7 @@ export const Hero = ({ darkmood, setDarkMood }: props) => {
             >
               programming events <span className="line" />
             </span>{' '}
-            and confferences. Fascinating on 3D object animations.
+            and tech conferences to expand knowledge and stay up to date with industry trends.
           </p>
         </div>
         {showEvent && <SocialEvent />}

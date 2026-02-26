@@ -1,5 +1,5 @@
 import React from 'react';
-import './currentProject.scss';
+import './plantify.scss';
 import { FaGooglePlay } from 'react-icons/fa';
 import { ScrollContainer } from 'react-nice-scroll';
 import logo from '../../assets/plantifiMobile.png';
@@ -29,13 +29,13 @@ const photos = [
   require('../../assets/plantifiPreview/14.jpg'),
 ];
 
-export const CurrentProject = () => {
+export const Plantify = () => {
   const googleplay =
     'https://play.google.com/store/apps/details?id=com.szymon1993.plantifi&fbclid=IwAR1lFjFubjrQVmCLFPci3drZMK5Of24S_g6VZRTed0MhHnqj1L0WfI1s1to';
   const gitHub = 'https://github.com/SzymonGonerko/Plantifi';
 
   return (
-    <section className="currentProject link">
+    <section className="plantify link">
       <div className="wrapperMobile">
         <header>
           <h1>Currently working on Plantifi</h1>
@@ -71,7 +71,7 @@ export const CurrentProject = () => {
         </div>
         <div className="plantifiDescriptionBox">
           <header>
-            <h1>Currently working on Plantifi</h1>
+            <h1>Plantifi waiting for investors</h1>
             <h2 className="short">
               Mobile app for manage and recognizing home plants. Created by 5 UX
               coworkers on Figma. Based on React Native and Expo environment.
