@@ -1,8 +1,7 @@
-import React, { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import './App.scss';
-import { ScrollContainer, useGlobalState } from 'react-nice-scroll';
+import { ScrollContainer } from 'react-nice-scroll';
 import 'react-nice-scroll/dist/styles.css';
-import { FaChevronUp } from 'react-icons/fa';
 
 import { Hero } from '../src/components/Hero/Hero';
 import { Plantify } from './components/Plantify/Plantify';
@@ -10,13 +9,13 @@ import { Repositories } from './components/Repositiories/Repositiories';
 import { Skills } from './components/Skills/Skills';
 import { MoreInfo } from './components/MoreInfo/MoreInfo';
 import { Footer } from './components/Footer/Footer';
+import { Navigation } from './components/Navigation/Navigation';
+import { Idbm } from './components/IDBM/Idbm';
 
 const AnimatedCursor = require('react-animated-cursor');
 
 const App = () => {
-  const [smoothScrollBar] = useGlobalState('smoothScrollBar');
   const [darkmood, setDarkMood] = useState(false);
-  const myapp = useRef() as any;
   const [windowSize, setWindowSize] = useState<number[]>([
     window.innerWidth,
     window.innerHeight,
@@ -38,12 +37,15 @@ const App = () => {
           'p.title',
           'span.event',
           'input',
+          'li',
           'textarea',
           'div.MuiInputBase-root',
         ]}
       />
+      <Navigation darkmood={darkmood} setDarkMood={setDarkMood} />
       <ScrollContainer damping={0.06} thumbMinSize={10}>
         <Hero darkmood={darkmood} setDarkMood={setDarkMood} />
+        <Idbm/>
         <Plantify />
         <Repositories windowWidth={windowSize[0]} />
         <Skills />
@@ -55,6 +57,7 @@ const App = () => {
 
   const mobileLayout = (
     <>
+      <Navigation darkmood={darkmood} setDarkMood={setDarkMood} />
       <Hero darkmood={darkmood} setDarkMood={setDarkMood} />
       <Plantify />
       <Repositories windowWidth={windowSize[0]} />
@@ -89,20 +92,11 @@ const App = () => {
     };
   }, []);
 
-  const scrollToTop = () => {
-    if (smoothScrollBar) {
-      smoothScrollBar.scrollTo(0, 0, 1000);
-    } else {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-  };
+
 
   return (
-    <main ref={myapp} className={`App ${darkmood ? 'darkmood' : ''}`}>
+    <main className={`App ${darkmood ? 'darkmood' : ''}`}>
       {windowSize[0] > 600 ? desktopLayout : mobileLayout}
-      <div id="topArrow" onClick={scrollToTop}>
-        <FaChevronUp />
-      </div>
     </main>
   );
 };

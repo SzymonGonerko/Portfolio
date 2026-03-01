@@ -1,78 +1,25 @@
 import React, { useState } from 'react';
 import './skills.scss';
-import { Accordion } from './Accordion/Accordion';
-
-const list = [
-  {
-    title: 'Technologies',
-    classNames: ['technologies', 'growLi'],
-    subNav: [
-      'HTML5',
-      'CSS3',
-      'SCSS',
-      'JavaScript',
-      'TypeScript',
-      'Python',
-      'C#',
-    ],
-  },
-  {
-    title: 'Other Tools',
-    classNames: ['otherTools'],
-    subNav: [
-      'React',
-      'React Native',
-      'Redux',
-      '.NET',
-      'Styled-Components',
-      'Material-UI',
-      'JSS',
-      'Firebase',
-      'Expo',
-      'Blender',
-      'Three.js',
-      'PIXI.js',
-      'Git',
-      'Prettier',
-      'Eslint',
-      'Rest API',
-    ],
-  },
-  {
-    title: 'Methodologies',
-    classNames: ['methodologies'],
-    subNav: ['OOP', 'Procedural programming', 'Agile', 'Scrum'],
-  },
-  {
-    title: 'IDE',
-    classNames: ['ide'],
-    subNav: [
-      'WebStorm',
-      'Visual Studio Code',
-      'Visal Studio',
-      'Gulp',
-      'WebPack',
-      'CMS',
-      'Linux',
-      'Windows',
-    ],
-  },
-];
+import { TreeSkills } from './TreeSkills/TreeSkills';
+import { IoMdSettings } from "react-icons/io";
 
 export const Skills = () => {
+  const [active, setActive] = useState(true)
   return (
     <section className="skills link">
       <div className="skillsSetup">
-        <Accordion list={list} />
+        <TreeSkills active={active} />
       </div>
       <div className="skillsInfo">
         <header>
           <h1>Skillsset</h1>
           <h2 className="short">
-            In my line of work, I use different tools depends of project
-            purpose. Graphics 3D objects, live chat, android app, games, data
-            users... and many more.
+
+Combining deep legal insight with strong technological understanding, I enable tech companies to operate with confidence, minimize risk, and turn regulatory challenges into strategic advantages.
           </h2>
+          <button onClick={() => {setActive(p => !p)}} className={"googlePlayLink"} >
+            {active? "Show": "Hide"} IT tools <IoMdSettings />
+          </button>
         </header>
       </div>
     </section>

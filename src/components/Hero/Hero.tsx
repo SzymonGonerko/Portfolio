@@ -45,7 +45,7 @@ export const Hero = ({ darkmood, setDarkMood }: props) => {
 
   return (
     <section className="hero link">
-      <nav className="circleNav">
+      {/* <nav className="circleNav">
         <ul>
           <li>
             <button onClick={() => scrollTo('plantify')}>
@@ -79,7 +79,7 @@ export const Hero = ({ darkmood, setDarkMood }: props) => {
             </button>
           </li>
         </ul>
-      </nav>
+      </nav> */}
 
       <header className="generalInfo">
         <div className="photo" />

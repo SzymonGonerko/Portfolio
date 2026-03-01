@@ -38,7 +38,7 @@ export const Plantify = () => {
     <section className="plantify link">
       <div className="wrapperMobile">
         <header>
-          <h1>Currently working on Plantifi</h1>
+          <h1>Plantifi waiting for investors</h1>
           <h2 className="short">
             Mobile app for manage and recognizing home plants. Created by 5 UX
             coworkers on Figma. Based on React Native and Expo roment. Published

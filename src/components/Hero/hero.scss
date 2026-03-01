@@ -10,38 +10,6 @@
   height: 100vh;
   font-size: 40px;
   font-family: 'Apfel';
-  .circleNav {
-    position: absolute;
-    top: 2%;
-    left: 0;
-    right: 0;
-    ul {
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-      align-items: center;
-      gap: 5vw;
-      list-style: none;
-      li {
-        button {
-          display: block;
-          font-family: 'Apfel';
-          overflow: hidden;
-          width: 8vw;
-          height: 8vw;
-          background-color: #424242;
-          color: #424242;
-          border-radius: 200px;
-          transition: 0.3s;
-          border: none;
-          font-size: 1.5vw;
-          &:hover {
-            color: #424242;
-          }
-        }
-      }
-    }
-  }
   .generalInfo {
     position: absolute;
     top: 40%;
@@ -85,44 +53,6 @@
     width: 100vw;
     font-size: 40px;
     font-family: 'Apfel';
-    .circleNav {
-      position: absolute;
-      top: 10%;
-      left: 0;
-      right: 0;
-      ul {
-        display: flex;
-        justify-content: center;
-        flex-direction: row;
-        align-items: flex-start;
-        gap: 6vw;
-        list-style: none;
-        li {
-          button {
-            display: block;
-            font-family: 'Apfel';
-            width: 3.5vw;
-            height: 3.5vw;
-            background-color: #a0a0a0;
-            color: #a0a0a0;
-            border-radius: 200px;
-            transition: 0.3s;
-            border: none;
-            font-size: 1.4vw;
-            overflow: hidden;
-            &:not(.toggle):hover {
-              color: white;
-              width: 15vw;
-              background-color: #424242;
-            }
-          }
-          .toggle:hover {
-            color: white;
-            background-color: #424242;
-          }
-        }
-      }
-    }
     .generalInfo {
       position: relative;
       top: 30%;

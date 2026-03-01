@@ -1,0 +1,126 @@
+@use '../mixins.scss' as *;
+
+.idbm {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  font-size: 40px;
+  font-family: 'Apfel', sans-serif;
+  .wrapperDesktop {
+    display: none;
+  }
+  .wrapperMobile {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    header {
+      display: flex;
+      flex-direction: column;
+      padding: 8px 8px 0 8px;
+      h1 {
+        @include titileMobile;
+      }
+      .short {
+        @include descriptionMobile;
+      }
+    }
+    .container {
+      position: relative;
+      flex-grow: 1;
+      margin: 8px;
+      .googlePlayLink {
+        @include customMobileButton;
+        strong {
+          margin-top: 1px;
+        }
+        svg {
+          line-height: 10vw;
+          margin-left: 5px;
+          font-size: 3vw;
+        }
+      }
+      img {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-47%, -50%);
+        width: 86%;
+      }
+    }
+  }
+  @media (min-width: 600px) {
+    .wrapperMobile {
+      display: none;
+    }
+    .wrapperDesktop {
+      display: flex;
+      flex-direction: row-reverse;
+      border: 2px solid black;
+      width: 100%;
+      height: 100%;
+      .idbmScrollBox {
+        display: flex;
+        flex-direction: column;
+        background-color: #ffffff;
+        width: 50%;
+        height: 100%;
+        .containerImg {
+          display: flex;
+          flex-direction: column;
+          margin: 64px;
+          justify-content: center;
+          align-items: center;
+          .tilt:not(:hover) {
+            transition: 1s;
+          }
+          img {
+            display: block;
+            width: 100% ;
+            height: auto;
+            box-shadow: 57px 84px 120px -90px rgba(66, 68, 90, 1);
+            border-radius: 26px;
+            border: 1px solid black;
+          }
+        }
+        .scrollbar-thumb {
+          width: 4px;
+          background: rgba(0, 0, 0, 0.114);
+        }
+        .scrollbar-track-y {
+          right: 8px;
+          width: 4px;
+        }
+      }
+      .idbmDescriptionBox {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        header {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          padding: 4.5vw 4vw 0 4vw;
+          h1 {
+            @include titileDesktop;
+          }
+          .short {
+            @include descriptionDesktop;
+            transform: translate(0, -20%);
+          }
+          .googlePlayLink {
+            @include customDesktopButton;
+            position: static;
+            font-weight: bold;
+            transform: none;
+            width: 16vw;
+            height: 4vw;
+            font-size: 1.2vw;
+            margin-top: 2vw;
+          }
+        }
+      }
+    }
+  }
+}
