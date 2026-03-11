@@ -58,13 +58,13 @@
       list-style: none;
       transition: all 0.4s ease;
       padding: 2vw;
-      opacity: 0.3;
-      background: rgba(30, 30, 30, 0.347);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
+      // opacity: 0.3;
+      background: rgba(30, 30, 30, .5);
       border-radius: 30px;
-      border: 1px solid rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, .5);
       overflow: hidden;
+            backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(4px);
     }
 
     li {
@@ -75,7 +75,7 @@
       button {
         width: 3.5vw;
         height: 3.5vw;
-        background-color: #a0a0a0;
+        background-color: transparent;
         color: transparent;
         border-radius: 200px;
         transition: all 0.4s ease;
@@ -85,14 +85,7 @@
         white-space: nowrap;
       }
     }
-    .logo {
-      height: 5vw;
-      width: 5vw;
-      background-image: url("../../assets/logo.png");
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
+
 
 ul:hover {
   width: 70%;
@@ -100,11 +93,8 @@ ul:hover {
   opacity: 1;
 
   li button {
-    background-color: #424242;
     color: white;
-    &:not(.logo) {
     width: 8vw;
-    }
   }
 }
   }

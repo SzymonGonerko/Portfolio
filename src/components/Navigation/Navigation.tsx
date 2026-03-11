@@ -26,8 +26,7 @@ export const Navigation = ({ darkmood, setDarkMood }: props) => {
       filteredLinks[0].scrollIntoView({ behavior: 'smooth' });
     }
   };
-    return <> 
-    <nav className="circleNav">
+    return <nav className="circleNav">
             <ul>
               <li>
                 <button onClick={() => scrollTo('plantify')}>
@@ -41,9 +40,6 @@ export const Navigation = ({ darkmood, setDarkMood }: props) => {
               </li>
               <li>
                 <button onClick={() => scrollTo('repo')}>Repositories</button>
-              </li>
-              <li>
-                <button onClick={() => scrollTo('hero')} className={"logo"}></button>
               </li>
               <li>
                 <button onClick={() => scrollTo('skills')}>Skillsset</button>
@@ -69,5 +65,5 @@ export const Navigation = ({ darkmood, setDarkMood }: props) => {
                 </button>
               </li>
             </ul>
-          </nav></> 
+          </nav>
 }

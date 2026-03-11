@@ -64,7 +64,7 @@ Built with a custom movie database, it showcases strong expertise in relational 
             <h1>IDBM as interactive fullstack app</h1>
             <h2 className="short">
 Interactive Database Movies is a full-stack application.
-Built with a custom movie database, it showcases expertise in relational database design and cloud deployment on Microsoft Azure and MSSQL.
+Built with relational database design and cloud deployment on Microsoft Azure and MSSQL.
             </h2>
             <a className="googlePlayLink" target={'_blank'} href={liveLink}>
               Check it out

@@ -14,8 +14,7 @@ export const Skills = () => {
         <header>
           <h1>Skillsset</h1>
           <h2 className="short">
-
-Combining deep legal insight with strong technological understanding, I enable tech companies to operate with confidence, minimize risk, and turn regulatory challenges into strategic advantages.
+Bridging law and technology to help companies navigate regulation, reduce risk, and gain a strategic edge.
           </h2>
           <button onClick={() => {setActive(p => !p)}} className={"googlePlayLink"} >
             {active? "Show": "Hide"} IT tools <IoMdSettings />

@@ -76,32 +76,16 @@ $font-family-fatt: 'ApfelFett', sans-serif;
         li {
           margin-bottom: 6px;
           font-family: 'ApfelFett';
+          list-style: none;
           ul {
             margin-top: 5px;
-            
             li {
               font-family: $font-family;
+              list-style: disc;
             }
           }
         }
       }
-    }
-
-    .shared.light-active {
-      background: $shared-bg;
-      color: $shared-color;
-      padding: 4px 8px;
-      border-radius: 8px;
-      transition: all 0.3s ease;
-    }
-
-    .strong-active {
-      background: $strong-bg;
-      color: white;
-      padding: 4px 8px;
-      border-radius: 8px;
-      font-weight: 600;
-      transition: all 0.3s ease;
     }
 
     @media (max-width: 900px) {
@@ -118,58 +102,7 @@ $font-family-fatt: 'ApfelFett', sans-serif;
   }
 }
 
-.group-1-light {
-  background: #dbeafe;
-  color: #1e40af;
-  padding: 4px 8px;
-  border-radius: 8px;
-  transition: 0.3s;
-}
 
-.group-1-strong {
-  background: #2563eb;
-  color: white;
-  padding: 4px 8px;
-  border-radius: 8px;
-  transition: 0.3s;
-}
-
-.group-2-light {
-  background: #dcfce7;
-  color: #166534;
-  padding: 4px 8px;
-  border-radius: 8px;
-  transition: 0.3s;
-}
-
-.group-2-strong {
-  background: #16a34a;
-  color: white;
-  padding: 4px 8px;
-  border-radius: 8px;
-  transition: 0.3s;
-}
-
-li span {
-  display: inline-block;
-  transition: all 0.3s ease;
-}
-
-.group-3-light {
-  background: #ede9fe;
-  color: #5b21b6;
-  padding: 4px 8px;
-  border-radius: 8px;
-  transition: all 0.3s ease;
-}
-
-.group-3-strong {
-  background: #7c3aed;
-  color: white;
-  padding: 4px 8px;
-  border-radius: 8px;
-  transition: all 0.3s ease;
-}
 
 .skill-item {
   display: flex;
