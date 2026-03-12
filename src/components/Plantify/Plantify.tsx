@@ -1,4 +1,3 @@
-import React from 'react';
 import './plantify.scss';
 import { FaGooglePlay } from 'react-icons/fa';
 import { ScrollContainer } from 'react-nice-scroll';
@@ -32,7 +31,6 @@ const photos = [
 export const Plantify = () => {
   const googleplay =
     'https://play.google.com/store/apps/details?id=com.szymon1993.plantifi&fbclid=IwAR1lFjFubjrQVmCLFPci3drZMK5Of24S_g6VZRTed0MhHnqj1L0WfI1s1to';
-  const gitHub = 'https://github.com/SzymonGonerko/Plantifi';
 
   return (
     <section className="plantify link">
@@ -47,7 +45,12 @@ export const Plantify = () => {
         </header>
         <div className="container">
           <img src={logo} alt="PlantifyApp" />
-          <a className="googlePlayLink" href={googleplay} target={'_blank'}>
+          <a
+            className="googlePlayLink"
+            href={googleplay}
+            rel={'noreferrer'}
+            target={'_blank'}
+          >
             Get in on <strong>GooglePlay</strong>
             <FaGooglePlay />
           </a>
@@ -77,7 +80,12 @@ export const Plantify = () => {
               coworkers on Figma. Based on React Native and Expo environment.
               Published on Google Play.
             </h2>
-            <a className="googlePlayLink" target={'_blank'} href={googleplay}>
+            <a
+              className="googlePlayLink"
+              target={'_blank'}
+              rel={'noreferrer'}
+              href={googleplay}
+            >
               Download by <strong>GooglePlay</strong>
               <FaGooglePlay />
             </a>

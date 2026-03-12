@@ -36,6 +36,7 @@
   opacity: 0;
   animation: showApp 0.25s linear 0.25s forwards;
   transition: 0.4s;
+  background-color: white;
 }
 
 .darkmood {
@@ -49,7 +50,6 @@
     background: rgba(222, 222, 222, 0.95) !important;
   }
   .hero {
-
     .generalInfo {
       .description {
         span {
@@ -58,12 +58,6 @@
             background-color: white;
           }
         }
-      }
-      .sign {
-        background-image: url('./assets/signDark.png');
-      }
-      .sign::after {
-        border-bottom: 2px dotted rgb(116, 116, 116);
       }
     }
     .circleVideo {
@@ -112,45 +106,13 @@
         background: #0b0b0b;
         box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
         h3 {
-                &::after {
-          background-color: white;
-        }
+          &::after {
+            background-color: white;
+          }
         }
         ul {
-        color: #a0a0a0;
-
+          color: #a0a0a0;
         }
-
-      }
-
-      .group-1-light {
-        background: rgba(37, 99, 235, 0.25);
-        color: #93c5fd;
-      }
-
-      .group-1-strong {
-        background: #2563eb;
-        color: white;
-      }
-
-      .group-2-light {
-        background: rgba(22, 163, 74, 0.25);
-        color: #86efac;
-      }
-
-      .group-2-strong {
-        background: #16a34a;
-        color: white;
-      }
-
-      .group-3-light {
-        background: rgba(124, 58, 237, 0.25);
-        color: #c4b5fd;
-      }
-
-      .group-3-strong {
-        background: #7c3aed;
-        color: white;
       }
     }
   }

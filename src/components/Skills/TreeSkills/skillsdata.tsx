@@ -27,15 +27,15 @@ import {
   SiTypescript,
   SiPython,
   SiCsharp,
+  SiMiro,
+  SiJira,
 } from 'react-icons/si';
 import { IconType } from 'react-icons';
 import { FaReact } from 'react-icons/fa';
 
-
-
 export interface SkillItem {
   label: string;
-  icon?: IconType;  
+  icon?: IconType;
   group?: number;
 }
 
@@ -63,50 +63,53 @@ export interface skillsStructureIT {
 
 export const skillsdata: skillsStructure[] = [
   {
-    heading: 'M.A. Administrative Law',
+    heading: 'Skills',
     categories: [
       {
-        title: 'Human Resources',
+        title: '',
         items: [
-          { label: 'Onboarding / Offboarding', group: 1 },
-          { label: 'Training and Development', group: 2 },
+          { label: 'Software development', group: 1 },
+          { label: 'Process automation', group: 2 },
         ],
       },
       {
-        title: 'Unilateral legal act',
+        title: '',
         items: [
-          { label: 'Legalization law process', group: 3 },
-          { label: 'Employment Compliance rules', group: 1 },
-          { label: 'Security incident management policy', group: 1 },
-          { label: 'Preparing non-disclosure agreement', group: 1 },
+          { label: 'Cloud deployment', group: 3 },
+          { label: 'Cybersecurity standards', group: 1 },
+          { label: 'Policy compliance (NIS/NIS2, GDPR)', group: 1 },
+          { label: 'Employee Onboarding & Offboarding', group: 1 },
+          { label: 'Agile', group: 1 },
+          { label: 'SEO', group: 1 },
         ],
       },
     ],
   },
   {
-    heading: 'Eng. Information Technology',
+    heading: 'Tech Stack',
     categories: [
       {
-        title: 'Software Development',
+        title: '',
         items: [
-          { label: 'Writing & implementing software', group: 3 },
-          { label: 'Sprint planning & review', group: 2 },
-          { label: 'Testing solutions (CI/CD)', group: 3 },
+          { label: 'React', group: 3 },
+          { label: 'React Native', group: 2 },
+          { label: 'Microsoft Azure', group: 3 },
         ],
       },
       {
-        title: 'Locally domain integration',
+        title: '',
         items: [
-          { label: 'Creating organizational Units', group: 1 },
-          { label: 'Group Policy Objects setup', group: 1 },
-          { label: 'Quota spaces and web disk', group: 1 },
+          { label: 'Kubernetes', group: 1 },
+          { label: 'Docker', group: 1 },
+          { label: 'MS SQL', group: 1 },
         ],
       },
       {
-        title: 'Fullstack services',
+        title: '',
         items: [
-          { label: 'Writing frontend app', group: 3 },
-          { label: 'Creating database structure', group: 3 },
+          { label: 'JavaScript/TypeScript', group: 3 },
+          { label: 'C#/.NET', group: 3 },
+          { label: 'Python', group: 3 },
         ],
       },
     ],
@@ -115,21 +118,18 @@ export const skillsdata: skillsStructure[] = [
 
 export const skillsdatait: skillsStructureIT[] = [
   {
-    heading: 'Other Tools',
+    heading: 'Technologies',
     categories: [
       {
         title: '',
         items: [
-          { label: 'React', icon: SiReact},
-          { label: 'React Native', icon: FaReact },
-          { label: 'Redux', icon: SiRedux },
-          { label: '.NET', icon: SiDotnet },
-          { label: 'Material-UI', icon: SiMaterialui },
-          { label: 'JSS', icon: SiJavascript },
-          { label: 'Blender', icon: SiBlender },
-          { label: 'Three.js', icon: SiThreedotjs },
-          { label: 'Prettier', icon: SiPrettier },
-          { label: 'Eslint', icon: SiEslint },
+          { label: 'HTML5', icon: SiHtml5 },
+          { label: 'CSS3', icon: SiCss3 },
+          { label: 'SCSS', icon: SiSass },
+          { label: 'JavaScript', icon: SiJavascript },
+          { label: 'TypeScript', icon: SiTypescript },
+          { label: 'Python', icon: SiPython },
+          { label: 'C#', icon: SiCsharp },
         ],
       },
     ],
@@ -144,10 +144,11 @@ export const skillsdatait: skillsStructureIT[] = [
           { label: 'MS Azure', icon: SiMicrosoftazure },
           { label: 'MS SQL', icon: SiMicrosoftsqlserver },
           { label: 'Google Cloud', icon: SiGooglecloud },
-          { label: 'EXPO', icon: SiGooglecloud },
+          { label: 'EXPO', icon: SiExpo },
           { label: 'Kubernetes', icon: SiKubernetes },
           { label: 'Docker', icon: SiDocker },
-          { label: 'CMS', icon: SiHtml5 },
+          { label: 'Miro', icon: SiMiro },
+          { label: 'Jira', icon: SiJira },
         ],
       },
     ],
@@ -169,19 +170,23 @@ export const skillsdatait: skillsStructureIT[] = [
       },
     ],
   },
+
   {
-    heading: 'Technologies',
+    heading: 'Other Tools',
     categories: [
       {
         title: '',
         items: [
-          { label: 'HTML5', icon: SiHtml5 },
-          { label: 'CSS3', icon: SiCss3 },
-          { label: 'SCSS', icon: SiSass },
-          { label: 'JavaScript', icon: SiJavascript },
-          { label: 'TypeScript', icon: SiTypescript },
-          { label: 'Python', icon: SiPython },
-          { label: 'C#', icon: SiCsharp },
+          { label: 'React', icon: SiReact },
+          { label: 'React Native', icon: FaReact },
+          { label: 'Redux', icon: SiRedux },
+          { label: '.NET', icon: SiDotnet },
+          { label: 'Material-UI', icon: SiMaterialui },
+          { label: 'JSS', icon: SiJavascript },
+          { label: 'Blender', icon: SiBlender },
+          { label: 'Three.js', icon: SiThreedotjs },
+          { label: 'Prettier', icon: SiPrettier },
+          { label: 'Eslint', icon: SiEslint },
         ],
       },
     ],

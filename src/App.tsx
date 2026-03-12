@@ -37,15 +37,14 @@ const App = () => {
           'p.title',
           'span.event',
           'input',
-          'li',
           'textarea',
           'div.MuiInputBase-root',
         ]}
       />
       <Navigation darkmood={darkmood} setDarkMood={setDarkMood} />
       <ScrollContainer damping={0.06} thumbMinSize={10}>
-        <Hero darkmood={darkmood} setDarkMood={setDarkMood} />
-        <Idbm/>
+        <Hero />
+        <Idbm />
         <Plantify />
         <Repositories windowWidth={windowSize[0]} />
         <Skills />
@@ -58,7 +57,7 @@ const App = () => {
   const mobileLayout = (
     <>
       <Navigation darkmood={darkmood} setDarkMood={setDarkMood} />
-      <Hero darkmood={darkmood} setDarkMood={setDarkMood} />
+      <Hero />
       <Plantify />
       <Repositories windowWidth={windowSize[0]} />
       <Skills />
@@ -91,8 +90,6 @@ const App = () => {
       window.removeEventListener('resize', handleWindowResize);
     };
   }, []);
-
-
 
   return (
     <main className={`App ${darkmood ? 'darkmood' : ''}`}>

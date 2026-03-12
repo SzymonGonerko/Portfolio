@@ -89,7 +89,6 @@ export const MoreInfo = ({ darkMood }: { darkMood: boolean }) => {
   return (
     <>
       <section className="moreInfo link">
-        {/* {basicInfoVisibility && <BasicInfo />} */}
         <BasicInfo />
         <div className="formContainer">
           <Form

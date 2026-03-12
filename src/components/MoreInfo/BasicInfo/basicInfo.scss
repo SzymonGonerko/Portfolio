@@ -36,6 +36,8 @@
       }
       h2 {
         @include descriptionDesktop;
+        color: #a0a0a0;
+
         padding-top: 0;
       }
     }

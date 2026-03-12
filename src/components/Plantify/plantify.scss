@@ -107,6 +107,7 @@
           .short {
             @include descriptionDesktop;
             transform: translate(0, -20%);
+            color: #a0a0a0;
           }
           .googlePlayLink {
             @include customDesktopButton;
