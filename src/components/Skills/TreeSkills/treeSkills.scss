@@ -9,7 +9,6 @@ $box-radius: 16px;
 $font-family: 'Apfel', sans-serif;
 $font-family-fatt: 'ApfelFett', sans-serif;
 
-
 .mainSkillsNav {
   width: 100%;
   height: 100%;
@@ -17,26 +16,25 @@ $font-family-fatt: 'ApfelFett', sans-serif;
   .diagram-container {
     font-family: $font-family;
     width: 100%;
-    height:100%;
+    height: 100%;
 
-      .row.long {
-        width: 100%;
-        height:100%;
-        display: flex;
-        .box {
-          max-width: 50%;
-          min-width: 25%;
-        }
-        .li_1 {
-          list-style: none;
-          padding-left: 0px;
-          padding-left: 0;
-          
-        }
-        .li_2 {
-          list-style: none;
-            padding-left: 0;
-        }
+    .row.long {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      .box {
+        max-width: 50%;
+        min-width: 25%;
+      }
+      .li_1 {
+        list-style: none;
+        padding-left: 0px;
+        padding-left: 0;
+      }
+      .li_2 {
+        list-style: none;
+        padding-left: 0;
+      }
     }
     .row {
       display: flex;
@@ -58,13 +56,13 @@ $font-family-fatt: 'ApfelFett', sans-serif;
         margin-top: 0;
         margin-bottom: 15px;
         font-family: 'ApfelFett';
-      &::after {
-          content: " ";
+        &::after {
+          content: ' ';
           display: inline-block;
           height: 1px;
           width: 100%;
           position: relative;
-          top:-10px;
+          top: -10px;
           left: 0;
           background-color: black;
         }
@@ -92,17 +90,15 @@ $font-family-fatt: 'ApfelFett', sans-serif;
       .row {
         flex-direction: column;
       }
-        .row.long {
-    .box {
-      min-width: 100%;
-      max-width: 100%;
-    }
-  }
+      .row.long {
+        .box {
+          min-width: 100%;
+          max-width: 100%;
+        }
+      }
     }
   }
 }
-
-
 
 .skill-item {
   display: flex;

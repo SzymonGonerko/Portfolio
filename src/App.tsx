@@ -37,7 +37,6 @@ const App = () => {
           'p.title',
           'span.event',
           'input',
-          'li',
           'textarea',
           'div.MuiInputBase-root',
         ]}
@@ -45,7 +44,7 @@ const App = () => {
       <Navigation darkmood={darkmood} setDarkMood={setDarkMood} />
       <ScrollContainer damping={0.06} thumbMinSize={10}>
         <Hero />
-        <Idbm/>
+        <Idbm />
         <Plantify />
         <Repositories windowWidth={windowSize[0]} />
         <Skills />
@@ -91,8 +90,6 @@ const App = () => {
       window.removeEventListener('resize', handleWindowResize);
     };
   }, []);
-
-
 
   return (
     <main className={`App ${darkmood ? 'darkmood' : ''}`}>

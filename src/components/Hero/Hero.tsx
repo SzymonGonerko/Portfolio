@@ -2,10 +2,8 @@ import React, { useState } from 'react';
 import './hero.scss';
 import { SocialEvent } from './SocialEvent/SocialEvent';
 
-
 export const Hero = () => {
   const [showEvent, setShowEvent] = useState(false);
-
 
   const onHandleClick = () => {
     setShowEvent(true);
@@ -31,7 +29,8 @@ export const Hero = () => {
           <h1>Szymon Gonerko</h1>
           <h2>Engineer developer & IT specialist</h2>
           <p className="description">
-            Developer and IT specialist focused on React and mobile application development using React Native. Regularly participates in{' '}
+            Developer and IT specialist focused on React and mobile application
+            development using React Native. Regularly participates in{' '}
             <span
               className="event"
               onClick={onHandleClick}
@@ -39,7 +38,8 @@ export const Hero = () => {
             >
               programming events <span className="line" />
             </span>{' '}
-            and tech conferences to expand knowledge and stay up to date with industry trends.
+            and tech conferences to expand knowledge and stay up to date with
+            industry trends.
           </p>
         </div>
         {showEvent && <SocialEvent />}

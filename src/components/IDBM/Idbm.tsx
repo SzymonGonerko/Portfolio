@@ -1,6 +1,6 @@
 import React from 'react';
 import './idbm.scss';
-import { FaPlay } from "react-icons/fa";
+import { FaPlay } from 'react-icons/fa';
 import { ScrollContainer } from 'react-nice-scroll';
 import logo from '../../assets/plantifiMobile.png';
 import { Tilt } from 'react-tilt';
@@ -24,20 +24,26 @@ const photos = [
 export const Idbm = () => {
   const liveLink = 'https://idbm.netlify.app/';
 
-
   return (
     <section className="idbm link">
       <div className="wrapperMobile">
         <header>
           <h1>IDBM as interactive fullstack app</h1>
           <h2 className="short">
-Interactive Database Movies is a full-stack application replicating the core features of modern movie platforms.
-Built with a custom movie database, it showcases strong expertise in relational database design and cloud deployment on Microsoft Azure and MSSQL.
+            Interactive Database Movies is a full-stack application replicating
+            the core features of modern movie platforms. Built with a custom
+            movie database, it showcases strong expertise in relational database
+            design and cloud deployment on Microsoft Azure and MSSQL.
           </h2>
         </header>
         <div className="container">
           <img src={logo} alt="PlantifyApp" />
-          <a className="googlePlayLink" href={liveLink} target={'_blank'}>
+          <a
+            className="googlePlayLink"
+            href={liveLink}
+            rel={'noreferrer'}
+            target={'_blank'}
+          >
             Check it out <strong>GooglePlay</strong>
             <FaPlay />
           </a>
@@ -63,10 +69,16 @@ Built with a custom movie database, it showcases strong expertise in relational 
           <header>
             <h1>IDBM as interactive fullstack app</h1>
             <h2 className="short">
-Interactive Database Movies is a full-stack application.
-Built with relational database design and cloud deployment on Microsoft Azure and MSSQL.
+              Interactive Database Movies is a full-stack application. Built
+              with relational database design and cloud deployment on Microsoft
+              Azure and MSSQL.
             </h2>
-            <a className="googlePlayLink" target={'_blank'} href={liveLink}>
+            <a
+              className="googlePlayLink"
+              target={'_blank'}
+              rel={'noreferrer'}
+              href={liveLink}
+            >
               Check it out
               <FaPlay />
             </a>

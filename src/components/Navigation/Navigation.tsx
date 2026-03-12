@@ -1,9 +1,8 @@
-import React from "react";
+import React from 'react';
 import { useGlobalState } from 'react-nice-scroll';
 import './navigation.scss';
 
 import { MdOutlineLightMode, MdOutlineNightlight } from 'react-icons/md';
-
 
 interface props {
   darkmood: boolean;
@@ -13,7 +12,7 @@ interface props {
 export const Navigation = ({ darkmood, setDarkMood }: props) => {
   const [smoothScrollBar] = useGlobalState('smoothScrollBar');
 
-    const scrollTo = (whitch: string) => {
+  const scrollTo = (whitch: string) => {
     const links = document.querySelectorAll(
       '.link'
     ) as unknown as HTMLElement[];
@@ -26,44 +25,42 @@ export const Navigation = ({ darkmood, setDarkMood }: props) => {
       filteredLinks[0].scrollIntoView({ behavior: 'smooth' });
     }
   };
-    return <nav className="circleNav">
-            <ul>
-              <li>
-                <button onClick={() => scrollTo('plantify')}>
-                  Plantify
-                </button>
-              </li>
-            <li>
-                <button onClick={() => scrollTo('idbm')}>
-                  IDBM
-                </button>
-              </li>
-              <li>
-                <button onClick={() => scrollTo('repo')}>Repositories</button>
-              </li>
-              <li>
-                <button onClick={() => scrollTo('skills')}>Skillsset</button>
-              </li>
-              <li>
-                <button onClick={() => scrollTo('moreInfo')}>Contact</button>
-              </li>
-              <li>
-                <button
-                  aria-label="toggle theme website"
-                  className="toggle"
-                  onClick={() => setDarkMood((p) => !p)}
-                >
-                  {!darkmood ? (
-                    <MdOutlineNightlight
-                      style={{ transform: 'translate(0, 0.13vw)' }}
-                    />
-                  ) : (
-                    <MdOutlineLightMode
-                      style={{ transform: 'translate(0, 0.13vw)' }}
-                    />
-                  )}
-                </button>
-              </li>
-            </ul>
-          </nav>
-}
+  return (
+    <nav className="circleNav">
+      <ul>
+        <li>
+          <button onClick={() => scrollTo('plantify')}>Plantify</button>
+        </li>
+        <li>
+          <button onClick={() => scrollTo('idbm')}>IDBM</button>
+        </li>
+        <li>
+          <button onClick={() => scrollTo('repo')}>Repositories</button>
+        </li>
+        <li>
+          <button onClick={() => scrollTo('skills')}>Skillsset</button>
+        </li>
+        <li>
+          <button onClick={() => scrollTo('moreInfo')}>Contact</button>
+        </li>
+        <li>
+          <button
+            aria-label="toggle theme website"
+            className="toggle"
+            onClick={() => setDarkMood((p) => !p)}
+          >
+            {!darkmood ? (
+              <MdOutlineNightlight
+                style={{ transform: 'translate(0, 0.13vw)' }}
+              />
+            ) : (
+              <MdOutlineLightMode
+                style={{ transform: 'translate(0, 0.13vw)' }}
+              />
+            )}
+          </button>
+        </li>
+      </ul>
+    </nav>
+  );
+};

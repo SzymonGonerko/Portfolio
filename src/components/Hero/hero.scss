@@ -113,27 +113,5 @@
         }
       }
     }
-    .sign {
-      background-image: url('../../assets/signLight.png');
-      position: absolute;
-      top: 82%;
-      left: 50%;
-      width: 32%;
-      height: 95%;
-      background-size: cover;
-      background-repeat: no-repeat;
-      z-index: -1;
-    }
-    .sign::after {
-      display: inline-block;
-      content: '';
-      width: 100%;
-      height: 3px;
-      border-bottom: 2px dotted black;
-      position: absolute;
-      top: 65%;
-      left: 0;
-      z-index: -2;
-    }
   }
 }

@@ -50,7 +50,6 @@
     background: rgba(222, 222, 222, 0.95) !important;
   }
   .hero {
-
     .generalInfo {
       .description {
         span {
@@ -59,12 +58,6 @@
             background-color: white;
           }
         }
-      }
-      .sign {
-        background-image: url('./assets/signDark.png');
-      }
-      .sign::after {
-        border-bottom: 2px dotted rgb(116, 116, 116);
       }
     }
     .circleVideo {
@@ -113,15 +106,13 @@
         background: #0b0b0b;
         box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
         h3 {
-                &::after {
-          background-color: white;
-        }
+          &::after {
+            background-color: white;
+          }
         }
         ul {
-        color: #a0a0a0;
-
+          color: #a0a0a0;
         }
-
       }
     }
   }
