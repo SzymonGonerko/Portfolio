@@ -5,7 +5,6 @@ import 'react-nice-scroll/dist/styles.css';
 
 import { Hero } from '../src/components/Hero/Hero';
 import { Plantify } from './components/Plantify/Plantify';
-import { Repositories } from './components/Repositiories/Repositiories';
 import { Skills } from './components/Skills/Skills';
 import { MoreInfo } from './components/MoreInfo/MoreInfo';
 import { Footer } from './components/Footer/Footer';
@@ -46,7 +45,6 @@ const App = () => {
         <Hero />
         <Idbm />
         <Plantify />
-        <Repositories windowWidth={windowSize[0]} />
         <Skills />
         <MoreInfo darkMood={darkmood} />
         <Footer />
@@ -59,7 +57,6 @@ const App = () => {
       <Navigation darkmood={darkmood} setDarkMood={setDarkMood} />
       <Hero />
       <Plantify />
-      <Repositories windowWidth={windowSize[0]} />
       <Skills />
       <MoreInfo darkMood={darkmood} />
       <Footer />

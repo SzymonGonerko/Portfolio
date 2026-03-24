@@ -35,9 +35,6 @@ export const Navigation = ({ darkmood, setDarkMood }: props) => {
           <button onClick={() => scrollTo('idbm')}>IDBM</button>
         </li>
         <li>
-          <button onClick={() => scrollTo('repo')}>Repositories</button>
-        </li>
-        <li>
           <button onClick={() => scrollTo('skills')}>Skillsset</button>
         </li>
         <li>
